@@ -1,0 +1,1156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="102551" lt="399" ts="1574373988453" s="false" lb="http://blazedemo.com" rc="200" rm="Embedded resource download error:http://blazedemo.com/assets/bootstrap.min.css code:Non HTTP response code: org.apache.http.ConnectionClosedException message:Non HTTP response message: Premature end of Content-Length delimited message body (expected: 126.461; received: 55.788), " tn="quick-test-ThreadStarter 1-51" dt="text" de="UTF-8" by="167927" ng="100" na="100">
+  <assertionResult>
+    <name>Timeout Check</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <httpSample t="11813" lt="399" ts="1574373988453" s="true" lb="http://blazedemo.com-0" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-51" dt="text" de="UTF-8" by="10640" ng="100" na="100">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Cache-Control: no-cache
+Content-Type: text/html; charset=UTF-8
+Date: Thu, 21 Nov 2019 22:06:28 GMT
+Server: Apache
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/</java.net.URL>
+  </httpSample>
+  <httpSample t="2325" lt="501" ts="1574374000268" s="true" lb="http://blazedemo.com-1" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-51" dt="text" de="UTF-8" by="83594" ng="100" na="100">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Accept-Ranges: none
+Vary: Accept-Encoding
+Content-Type: text/javascript; charset=UTF-8
+Access-Control-Allow-Origin: *
+Timing-Allow-Origin: *
+Date: Wed, 20 Nov 2019 14:44:55 GMT
+Expires: Thu, 19 Nov 2020 14:44:55 GMT
+Last-Modified: Tue, 20 Dec 2016 18:17:03 GMT
+X-Content-Type-Options: nosniff
+Server: sffe
+X-XSS-Protection: 0
+Cache-Control: public, max-age=31536000, stale-while-revalidate=2592000
+Age: 112905
+Transfer-Encoding: chunked
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: ajax.googleapis.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js</java.net.URL>
+  </httpSample>
+  <httpSample t="4177" lt="2432" ts="1574374000268" s="true" lb="http://blazedemo.com-2" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-51" dt="text" de="" by="28881" ng="100" na="100">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Type: text/javascript
+Date: Thu, 21 Nov 2019 22:06:41 GMT
+Last-Modified: Mon, 20 May 2019 11:56:28 GMT
+Server: Apache
+Content-Length: 28663
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/assets/bootstrap.min.js</java.net.URL>
+  </httpSample>
+  <httpSample t="5527" lt="1386" ts="1574374000268" s="true" lb="http://blazedemo.com-3" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-51" dt="text" de="" by="39388" ng="100" na="100">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Type: text/javascript
+Date: Thu, 21 Nov 2019 22:06:41 GMT
+Last-Modified: Mon, 20 May 2019 11:56:28 GMT
+Server: Apache
+Content-Length: 39170
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/assets/bootstrap-table.js</java.net.URL>
+  </httpSample>
+  <httpSample t="90736" lt="1401" ts="1574374000268" s="false" lb="http://blazedemo.com-4" rc="Non HTTP response code: org.apache.http.ConnectionClosedException" rm="Non HTTP response message: Premature end of Content-Length delimited message body (expected: 126.461; received: 55.788)" tn="quick-test-ThreadStarter 1-51" dt="text" de="" by="1449" ng="100" na="100">
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <responseData class="java.lang.String">org.apache.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 126.461; received: 55.788)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:135)
+	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:148)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.readResponse(HTTPSamplerBase.java:1850)
+	at org.apache.jmeter.protocol.http.sampler.HTTPAbstractImpl.readResponse(HTTPAbstractImpl.java:477)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:600)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:67)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase$ASyncSample.call(HTTPSamplerBase.java:2070)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase$ASyncSample.call(HTTPSamplerBase.java:2038)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</responseData>
+    <cookies class="java.lang.String"></cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://blazedemo.com/assets/bootstrap.min.css</java.net.URL>
+  </httpSample>
+  <httpSample t="385" lt="384" ts="1574374002594" s="true" lb="http://blazedemo.com-5" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-51" dt="text" de="" by="3975" ng="100" na="100">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Type: text/css
+Date: Thu, 21 Nov 2019 22:06:42 GMT
+Last-Modified: Mon, 20 May 2019 11:56:28 GMT
+Server: Apache
+Content-Length: 3765
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/assets/bootstrap-table.css</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Cache-Control: no-cache
+Content-Type: text/html; charset=UTF-8
+Date: Thu, 21 Nov 2019 22:06:28 GMT
+Server: Apache
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+  <responseData class="java.lang.String">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;(window.NREUM||(NREUM={})).loader_config={licenseKey:&quot;338cffe5d3&quot;,applicationID:&quot;6657625&quot;};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if(&quot;function&quot;==typeof __nr_require)return __nr_require;for(var i=0;i&lt;t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n(&quot;handle&quot;),a=n(4),f=n(5),c=n(&quot;ee&quot;).get(&quot;tracer&quot;),u=n(&quot;loader&quot;),s=NREUM;&quot;undefined&quot;==typeof window.newrelic&amp;&amp;(newrelic=s);var p=[&quot;setPageViewName&quot;,&quot;setCustomAttribute&quot;,&quot;setErrorHandler&quot;,&quot;finished&quot;,&quot;addToTrace&quot;,&quot;inlineHit&quot;,&quot;addRelease&quot;],d=&quot;api-&quot;,l=d+&quot;ixn-&quot;;a(p,function(n,e){s[e]=i(d+e,!0,&quot;api&quot;)}),s.addPageAction=i(d+&quot;addPageAction&quot;,!0),s.setCurrentRouteName=i(d+&quot;routeName&quot;,!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i=&quot;function&quot;==typeof e;return o(l+&quot;tracer&quot;,[u.now(),n,t],r),function(){if(c.emit((i?&quot;&quot;:&quot;no-&quot;)+&quot;fn-start&quot;,[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit(&quot;fn-err&quot;,[arguments,this,n],t),n}finally{c.emit(&quot;fn-end&quot;,[u.now()],t)}}}};a(&quot;actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get&quot;.split(&quot;,&quot;),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){&quot;string&quot;==typeof n&amp;&amp;(n=new Error(n)),o(&quot;err&quot;,[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){&quot;first-paint&quot;===n.name?a(&quot;timing&quot;,[&quot;fp&quot;,Math.floor(n.startTime)]):&quot;first-contentful-paint&quot;===n.name&amp;&amp;a(&quot;timing&quot;,[&quot;fcp&quot;,Math.floor(n.startTime)])})}function i(n){if(n instanceof c&amp;&amp;!s){var e,t=Math.round(n.timeStamp);e=t&gt;1e12?Date.now()-t:f.now()-t,s=!0,a(&quot;timing&quot;,[&quot;fi&quot;,t,{type:n.type,fid:e}])}}if(!(&quot;init&quot;in NREUM&amp;&amp;&quot;page_view_timing&quot;in NREUM.init&amp;&amp;&quot;enabled&quot;in NREUM.init.page_view_timing&amp;&amp;NREUM.init.page_view_timing.enabled===!1)){var o,a=n(&quot;handle&quot;),f=n(&quot;loader&quot;),c=NREUM.o.EV;if(&quot;PerformanceObserver&quot;in window&amp;&amp;&quot;function&quot;==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:[&quot;paint&quot;]})}catch(u){}}if(&quot;addEventListener&quot;in document){var s=!1,p=[&quot;click&quot;,&quot;keydown&quot;,&quot;mousedown&quot;,&quot;pointerdown&quot;,&quot;touchstart&quot;];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split(&quot;.&quot;),r=e.split(&quot;.&quot;),a=0;a&lt;r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&amp;&amp;f.indexOf(&quot;Chrome&quot;)===-1&amp;&amp;f.indexOf(&quot;Chromium&quot;)===-1&amp;&amp;(i=&quot;Safari&quot;,o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r=&quot;&quot;,o=0;for(r in n)i.call(n,r)&amp;&amp;(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),&quot;undefined&quot;==typeof t&amp;&amp;(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i&lt;0?0:i);++r&lt;i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:&quot;undefined&quot;!=typeof window.performance&amp;&amp;window.performance.timing&amp;&amp;&quot;undefined&quot;!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&amp;&amp;n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&amp;&amp;n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u&lt;c;u++)f[u].apply(a,r);var p=s[y[t]];return p&amp;&amp;p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r&lt;t.length;r++)t[r]===e&amp;&amp;t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||&quot;feature&quot;,y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&amp;&amp;(d.aborted=!0,s=d.backlog={})}var f=&quot;nr@context&quot;,c=n(&quot;gos&quot;),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&amp;&amp;Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n(&quot;ee&quot;).get(&quot;handle&quot;);e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||&quot;object&quot;!==e&amp;&amp;&quot;function&quot;!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o=&quot;nr@id&quot;,a=n(&quot;gos&quot;);e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName(&quot;script&quot;)[0];if(setTimeout(s.abort,3e4),!(n&amp;&amp;n.licenseKey&amp;&amp;n.applicationID&amp;&amp;e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c(&quot;mark&quot;,[&quot;onload&quot;,a()+E.offset],null,&quot;api&quot;);var t=l.createElement(&quot;script&quot;);t.src=&quot;https://&quot;+n.agent,e.parentNode.insertBefore(t,e)}}function i(){&quot;complete&quot;===l.readyState&amp;&amp;o()}function o(){c(&quot;mark&quot;,[&quot;domContent&quot;,a()+E.offset],null,&quot;api&quot;)}function a(){return O.exists&amp;&amp;performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n(&quot;handle&quot;),u=n(4),s=n(&quot;ee&quot;),p=n(3),d=window,l=d.document,m=&quot;addEventListener&quot;,v=&quot;attachEvent&quot;,g=d.XMLHttpRequest,w=g&amp;&amp;g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=&quot;&quot;+location,y={beacon:&quot;bam.nr-data.net&quot;,errorBeacon:&quot;bam.nr-data.net&quot;,agent:&quot;js-agent.newrelic.com/nr-1153.min.js&quot;},b=g&amp;&amp;w&amp;&amp;w[m]&amp;&amp;!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m](&quot;DOMContentLoaded&quot;,o,!1),d[m](&quot;load&quot;,r,!1)):(l[v](&quot;onreadystatechange&quot;,i),d[v](&quot;onload&quot;,r)),c(&quot;mark&quot;,[&quot;firstbyte&quot;,f],null,&quot;api&quot;);var x=0,O=n(6)},{}],&quot;wrap-function&quot;:[function(n,e,t){function r(n){return!(n&amp;&amp;n instanceof Function&amp;&amp;n.apply&amp;&amp;!n[a])}var i=n(&quot;ee&quot;),o=n(5),a=&quot;nr@original&quot;,f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f=&quot;function&quot;==typeof t?t(r,a):t||{}}catch(u){d([u,&quot;&quot;,[r,a,i],f])}s(e+&quot;start&quot;,[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+&quot;err&quot;,[r,a,p],f),p}finally{s(e+&quot;end&quot;,[r,a,c],f)}}return r(n)?n:(e||(e=&quot;&quot;),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i=&quot;&quot;);var a,f,c,u=&quot;-&quot;===i.charAt(0);for(c=0;c&lt;e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&amp;&amp;Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&amp;&amp;(e[i]=n[i]);return e}function d(e){try{n.emit(&quot;internal-error&quot;,e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},[&quot;loader&quot;]);&lt;/script&gt;
+    &lt;title&gt; BlazeDemo&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;BlazeMeter demo app&quot;&gt;
+    &lt;meta name=&quot;sage&quot; content=&quot;flights app&quot;&gt;
+
+    &lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/assets/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/assets/bootstrap-table.js&quot;&gt;&lt;/script&gt;
+    &lt;link href=&quot;/assets/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
+    &lt;link href=&quot;/assets/bootstrap-table.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        body {
+            background: #f5f5f5);
+        }
+
+        .hero-unit {
+            background-color: #fff;
+        }
+
+        .center {
+            display: block;
+            margin: 0 auto;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+        &lt;div class=&quot;navbar navbar-inverse&quot;&gt;
+        &lt;div class=&quot;navbar-inner&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;a class=&quot;btn btn-navbar&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.nav-collapse&quot;&gt;
+                    &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;a class=&quot;brand&quot; href=&quot;index.php&quot;&gt;Travel The World&lt;/a&gt;
+                &lt;a class=&quot;brand&quot; href=&quot;home&quot;&gt;home&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+
+    &lt;div class=&quot;jumbotron&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;h1&gt;Welcome to the Simple Travel Agency!&lt;/h1&gt;
+            &lt;p&gt;The is a sample site you can test with BlazeMeter! &lt;/p&gt;
+            &lt;p&gt;Check out our &lt;a href=&quot;vacation.html&quot;&gt;destination of the week! The Beach!&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;div class=&quot;container&quot;&gt;
+        &lt;h2&gt;Choose your departure city:&lt;/h2&gt;
+    &lt;form action=&quot;reserve.php&quot; method=&quot;post&quot;&gt;
+        &lt;select name=&quot;fromPort&quot; class=&quot;form-inline&quot;&gt;
+            &lt;option value=&quot;Paris&quot;&gt;Paris&lt;/option&gt;
+            &lt;option value=&quot;Philadelphia&quot;&gt;Philadelphia&lt;/option&gt;
+            &lt;option value=&quot;Boston&quot;&gt;Boston&lt;/option&gt;
+            &lt;option value=&quot;Portland&quot;&gt;Portland&lt;/option&gt;
+            &lt;option value=&quot;San Diego&quot;&gt;San Diego&lt;/option&gt;
+            &lt;option value=&quot;Mexico City&quot;&gt;Mexico City&lt;/option&gt;
+            &lt;option value=&quot;São Paolo&quot;&gt;São Paolo&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;p&gt;
+        &lt;h2&gt;Choose your destination city:&lt;/h2&gt;
+        &lt;select name=&quot;toPort&quot; class=&quot;form-inline&quot;&gt;
+            &lt;option value=&quot;Buenos Aires&quot;&gt;Buenos Aires&lt;/option&gt;
+            &lt;option value=&quot;Rome&quot;&gt;Rome&lt;/option&gt;
+            &lt;option value=&quot;London&quot;&gt;London&lt;/option&gt;
+            &lt;option value=&quot;Berlin&quot;&gt;Berlin&lt;/option&gt;
+            &lt;option value=&quot;New York&quot;&gt;New York&lt;/option&gt;
+            &lt;option value=&quot;Dublin&quot;&gt;Dublin&lt;/option&gt;
+            &lt;option value=&quot;Cairo&quot;&gt;Cairo&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;p&gt;&lt;/p&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;input type=&quot;submit&quot; class=&quot;btn btn-primary&quot; value=&quot;Find Flights&quot;/&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;window.NREUM||(NREUM={});NREUM.info={&quot;beacon&quot;:&quot;bam.nr-data.net&quot;,&quot;licenseKey&quot;:&quot;338cffe5d3&quot;,&quot;applicationID&quot;:&quot;6657625&quot;,&quot;transactionName&quot;:&quot;YVxSYxACCxcEVRFfWlgWcVQWCgoKSg==&quot;,&quot;queueTime&quot;:0,&quot;applicationTime&quot;:8,&quot;atts&quot;:&quot;TRtRFVgYGBk=&quot;,&quot;errorBeacon&quot;:&quot;bam.nr-data.net&quot;,&quot;agent&quot;:&quot;&quot;}&lt;/script&gt;&lt;/body&gt;
+&lt;/html&gt;</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://blazedemo.com/</java.net.URL>
+</httpSample>
+<httpSample t="88569" lt="414" ts="1574374010819" s="false" lb="http://blazedemo.com" rc="200" rm="Embedded resource download error:http://blazedemo.com/assets/bootstrap.min.css code:Non HTTP response code: org.apache.http.ConnectionClosedException message:Non HTTP response message: Premature end of Content-Length delimited message body (expected: 126.461; received: 57.188), " tn="quick-test-ThreadStarter 1-87" dt="text" de="UTF-8" by="167927" ng="100" na="100">
+  <assertionResult>
+    <name>Timeout Check</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <httpSample t="1193" lt="414" ts="1574374010819" s="true" lb="http://blazedemo.com-0" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-87" dt="text" de="UTF-8" by="10640" ng="100" na="100">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Cache-Control: no-cache
+Content-Type: text/html; charset=UTF-8
+Date: Thu, 21 Nov 2019 22:06:51 GMT
+Server: Apache
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/</java.net.URL>
+  </httpSample>
+  <httpSample t="6878" lt="800" ts="1574374012013" s="true" lb="http://blazedemo.com-1" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-87" dt="text" de="UTF-8" by="83594" ng="100" na="100">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Accept-Ranges: none
+Vary: Accept-Encoding
+Content-Type: text/javascript; charset=UTF-8
+Access-Control-Allow-Origin: *
+Timing-Allow-Origin: *
+Date: Wed, 20 Nov 2019 14:44:55 GMT
+Expires: Thu, 19 Nov 2020 14:44:55 GMT
+Last-Modified: Tue, 20 Dec 2016 18:17:03 GMT
+X-Content-Type-Options: nosniff
+Server: sffe
+X-XSS-Protection: 0
+Cache-Control: public, max-age=31536000, stale-while-revalidate=2592000
+Age: 112917
+Transfer-Encoding: chunked
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: ajax.googleapis.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js</java.net.URL>
+  </httpSample>
+  <httpSample t="7511" lt="1398" ts="1574374012013" s="true" lb="http://blazedemo.com-2" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-87" dt="text" de="" by="28881" ng="100" na="100">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Type: text/javascript
+Date: Thu, 21 Nov 2019 22:06:53 GMT
+Last-Modified: Mon, 20 May 2019 11:56:28 GMT
+Server: Apache
+Content-Length: 28663
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/assets/bootstrap.min.js</java.net.URL>
+  </httpSample>
+  <httpSample t="14008" lt="386" ts="1574374012013" s="true" lb="http://blazedemo.com-3" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-87" dt="text" de="" by="39388" ng="100" na="100">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Type: text/javascript
+Date: Thu, 21 Nov 2019 22:06:52 GMT
+Last-Modified: Mon, 20 May 2019 11:56:28 GMT
+Server: Apache
+Content-Length: 39170
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/assets/bootstrap-table.js</java.net.URL>
+  </httpSample>
+  <httpSample t="87375" lt="198" ts="1574374012013" s="false" lb="http://blazedemo.com-4" rc="Non HTTP response code: org.apache.http.ConnectionClosedException" rm="Non HTTP response message: Premature end of Content-Length delimited message body (expected: 126.461; received: 57.188)" tn="quick-test-ThreadStarter 1-87" dt="text" de="" by="1449" ng="100" na="100">
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <responseData class="java.lang.String">org.apache.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 126.461; received: 57.188)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:135)
+	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:148)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.readResponse(HTTPSamplerBase.java:1850)
+	at org.apache.jmeter.protocol.http.sampler.HTTPAbstractImpl.readResponse(HTTPAbstractImpl.java:477)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:600)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:67)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase$ASyncSample.call(HTTPSamplerBase.java:2070)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase$ASyncSample.call(HTTPSamplerBase.java:2038)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</responseData>
+    <cookies class="java.lang.String"></cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://blazedemo.com/assets/bootstrap.min.css</java.net.URL>
+  </httpSample>
+  <httpSample t="1178" lt="381" ts="1574374018892" s="true" lb="http://blazedemo.com-5" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-87" dt="text" de="" by="3975" ng="100" na="100">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Type: text/css
+Date: Thu, 21 Nov 2019 22:06:59 GMT
+Last-Modified: Mon, 20 May 2019 11:56:28 GMT
+Server: Apache
+Content-Length: 3765
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/assets/bootstrap-table.css</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Cache-Control: no-cache
+Content-Type: text/html; charset=UTF-8
+Date: Thu, 21 Nov 2019 22:06:51 GMT
+Server: Apache
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+  <responseData class="java.lang.String">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;(window.NREUM||(NREUM={})).loader_config={licenseKey:&quot;338cffe5d3&quot;,applicationID:&quot;6657625&quot;};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if(&quot;function&quot;==typeof __nr_require)return __nr_require;for(var i=0;i&lt;t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n(&quot;handle&quot;),a=n(4),f=n(5),c=n(&quot;ee&quot;).get(&quot;tracer&quot;),u=n(&quot;loader&quot;),s=NREUM;&quot;undefined&quot;==typeof window.newrelic&amp;&amp;(newrelic=s);var p=[&quot;setPageViewName&quot;,&quot;setCustomAttribute&quot;,&quot;setErrorHandler&quot;,&quot;finished&quot;,&quot;addToTrace&quot;,&quot;inlineHit&quot;,&quot;addRelease&quot;],d=&quot;api-&quot;,l=d+&quot;ixn-&quot;;a(p,function(n,e){s[e]=i(d+e,!0,&quot;api&quot;)}),s.addPageAction=i(d+&quot;addPageAction&quot;,!0),s.setCurrentRouteName=i(d+&quot;routeName&quot;,!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i=&quot;function&quot;==typeof e;return o(l+&quot;tracer&quot;,[u.now(),n,t],r),function(){if(c.emit((i?&quot;&quot;:&quot;no-&quot;)+&quot;fn-start&quot;,[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit(&quot;fn-err&quot;,[arguments,this,n],t),n}finally{c.emit(&quot;fn-end&quot;,[u.now()],t)}}}};a(&quot;actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get&quot;.split(&quot;,&quot;),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){&quot;string&quot;==typeof n&amp;&amp;(n=new Error(n)),o(&quot;err&quot;,[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){&quot;first-paint&quot;===n.name?a(&quot;timing&quot;,[&quot;fp&quot;,Math.floor(n.startTime)]):&quot;first-contentful-paint&quot;===n.name&amp;&amp;a(&quot;timing&quot;,[&quot;fcp&quot;,Math.floor(n.startTime)])})}function i(n){if(n instanceof c&amp;&amp;!s){var e,t=Math.round(n.timeStamp);e=t&gt;1e12?Date.now()-t:f.now()-t,s=!0,a(&quot;timing&quot;,[&quot;fi&quot;,t,{type:n.type,fid:e}])}}if(!(&quot;init&quot;in NREUM&amp;&amp;&quot;page_view_timing&quot;in NREUM.init&amp;&amp;&quot;enabled&quot;in NREUM.init.page_view_timing&amp;&amp;NREUM.init.page_view_timing.enabled===!1)){var o,a=n(&quot;handle&quot;),f=n(&quot;loader&quot;),c=NREUM.o.EV;if(&quot;PerformanceObserver&quot;in window&amp;&amp;&quot;function&quot;==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:[&quot;paint&quot;]})}catch(u){}}if(&quot;addEventListener&quot;in document){var s=!1,p=[&quot;click&quot;,&quot;keydown&quot;,&quot;mousedown&quot;,&quot;pointerdown&quot;,&quot;touchstart&quot;];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split(&quot;.&quot;),r=e.split(&quot;.&quot;),a=0;a&lt;r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&amp;&amp;f.indexOf(&quot;Chrome&quot;)===-1&amp;&amp;f.indexOf(&quot;Chromium&quot;)===-1&amp;&amp;(i=&quot;Safari&quot;,o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r=&quot;&quot;,o=0;for(r in n)i.call(n,r)&amp;&amp;(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),&quot;undefined&quot;==typeof t&amp;&amp;(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i&lt;0?0:i);++r&lt;i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:&quot;undefined&quot;!=typeof window.performance&amp;&amp;window.performance.timing&amp;&amp;&quot;undefined&quot;!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&amp;&amp;n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&amp;&amp;n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u&lt;c;u++)f[u].apply(a,r);var p=s[y[t]];return p&amp;&amp;p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r&lt;t.length;r++)t[r]===e&amp;&amp;t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||&quot;feature&quot;,y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&amp;&amp;(d.aborted=!0,s=d.backlog={})}var f=&quot;nr@context&quot;,c=n(&quot;gos&quot;),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&amp;&amp;Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n(&quot;ee&quot;).get(&quot;handle&quot;);e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||&quot;object&quot;!==e&amp;&amp;&quot;function&quot;!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o=&quot;nr@id&quot;,a=n(&quot;gos&quot;);e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName(&quot;script&quot;)[0];if(setTimeout(s.abort,3e4),!(n&amp;&amp;n.licenseKey&amp;&amp;n.applicationID&amp;&amp;e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c(&quot;mark&quot;,[&quot;onload&quot;,a()+E.offset],null,&quot;api&quot;);var t=l.createElement(&quot;script&quot;);t.src=&quot;https://&quot;+n.agent,e.parentNode.insertBefore(t,e)}}function i(){&quot;complete&quot;===l.readyState&amp;&amp;o()}function o(){c(&quot;mark&quot;,[&quot;domContent&quot;,a()+E.offset],null,&quot;api&quot;)}function a(){return O.exists&amp;&amp;performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n(&quot;handle&quot;),u=n(4),s=n(&quot;ee&quot;),p=n(3),d=window,l=d.document,m=&quot;addEventListener&quot;,v=&quot;attachEvent&quot;,g=d.XMLHttpRequest,w=g&amp;&amp;g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=&quot;&quot;+location,y={beacon:&quot;bam.nr-data.net&quot;,errorBeacon:&quot;bam.nr-data.net&quot;,agent:&quot;js-agent.newrelic.com/nr-1153.min.js&quot;},b=g&amp;&amp;w&amp;&amp;w[m]&amp;&amp;!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m](&quot;DOMContentLoaded&quot;,o,!1),d[m](&quot;load&quot;,r,!1)):(l[v](&quot;onreadystatechange&quot;,i),d[v](&quot;onload&quot;,r)),c(&quot;mark&quot;,[&quot;firstbyte&quot;,f],null,&quot;api&quot;);var x=0,O=n(6)},{}],&quot;wrap-function&quot;:[function(n,e,t){function r(n){return!(n&amp;&amp;n instanceof Function&amp;&amp;n.apply&amp;&amp;!n[a])}var i=n(&quot;ee&quot;),o=n(5),a=&quot;nr@original&quot;,f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f=&quot;function&quot;==typeof t?t(r,a):t||{}}catch(u){d([u,&quot;&quot;,[r,a,i],f])}s(e+&quot;start&quot;,[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+&quot;err&quot;,[r,a,p],f),p}finally{s(e+&quot;end&quot;,[r,a,c],f)}}return r(n)?n:(e||(e=&quot;&quot;),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i=&quot;&quot;);var a,f,c,u=&quot;-&quot;===i.charAt(0);for(c=0;c&lt;e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&amp;&amp;Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&amp;&amp;(e[i]=n[i]);return e}function d(e){try{n.emit(&quot;internal-error&quot;,e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},[&quot;loader&quot;]);&lt;/script&gt;
+    &lt;title&gt; BlazeDemo&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;BlazeMeter demo app&quot;&gt;
+    &lt;meta name=&quot;sage&quot; content=&quot;flights app&quot;&gt;
+
+    &lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/assets/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/assets/bootstrap-table.js&quot;&gt;&lt;/script&gt;
+    &lt;link href=&quot;/assets/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
+    &lt;link href=&quot;/assets/bootstrap-table.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        body {
+            background: #f5f5f5);
+        }
+
+        .hero-unit {
+            background-color: #fff;
+        }
+
+        .center {
+            display: block;
+            margin: 0 auto;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+        &lt;div class=&quot;navbar navbar-inverse&quot;&gt;
+        &lt;div class=&quot;navbar-inner&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;a class=&quot;btn btn-navbar&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.nav-collapse&quot;&gt;
+                    &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;a class=&quot;brand&quot; href=&quot;index.php&quot;&gt;Travel The World&lt;/a&gt;
+                &lt;a class=&quot;brand&quot; href=&quot;home&quot;&gt;home&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+
+    &lt;div class=&quot;jumbotron&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;h1&gt;Welcome to the Simple Travel Agency!&lt;/h1&gt;
+            &lt;p&gt;The is a sample site you can test with BlazeMeter! &lt;/p&gt;
+            &lt;p&gt;Check out our &lt;a href=&quot;vacation.html&quot;&gt;destination of the week! The Beach!&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;div class=&quot;container&quot;&gt;
+        &lt;h2&gt;Choose your departure city:&lt;/h2&gt;
+    &lt;form action=&quot;reserve.php&quot; method=&quot;post&quot;&gt;
+        &lt;select name=&quot;fromPort&quot; class=&quot;form-inline&quot;&gt;
+            &lt;option value=&quot;Paris&quot;&gt;Paris&lt;/option&gt;
+            &lt;option value=&quot;Philadelphia&quot;&gt;Philadelphia&lt;/option&gt;
+            &lt;option value=&quot;Boston&quot;&gt;Boston&lt;/option&gt;
+            &lt;option value=&quot;Portland&quot;&gt;Portland&lt;/option&gt;
+            &lt;option value=&quot;San Diego&quot;&gt;San Diego&lt;/option&gt;
+            &lt;option value=&quot;Mexico City&quot;&gt;Mexico City&lt;/option&gt;
+            &lt;option value=&quot;São Paolo&quot;&gt;São Paolo&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;p&gt;
+        &lt;h2&gt;Choose your destination city:&lt;/h2&gt;
+        &lt;select name=&quot;toPort&quot; class=&quot;form-inline&quot;&gt;
+            &lt;option value=&quot;Buenos Aires&quot;&gt;Buenos Aires&lt;/option&gt;
+            &lt;option value=&quot;Rome&quot;&gt;Rome&lt;/option&gt;
+            &lt;option value=&quot;London&quot;&gt;London&lt;/option&gt;
+            &lt;option value=&quot;Berlin&quot;&gt;Berlin&lt;/option&gt;
+            &lt;option value=&quot;New York&quot;&gt;New York&lt;/option&gt;
+            &lt;option value=&quot;Dublin&quot;&gt;Dublin&lt;/option&gt;
+            &lt;option value=&quot;Cairo&quot;&gt;Cairo&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;p&gt;&lt;/p&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;input type=&quot;submit&quot; class=&quot;btn btn-primary&quot; value=&quot;Find Flights&quot;/&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;window.NREUM||(NREUM={});NREUM.info={&quot;beacon&quot;:&quot;bam.nr-data.net&quot;,&quot;licenseKey&quot;:&quot;338cffe5d3&quot;,&quot;applicationID&quot;:&quot;6657625&quot;,&quot;transactionName&quot;:&quot;YVxSYxACCxcEVRFfWlgWcVQWCgoKSg==&quot;,&quot;queueTime&quot;:0,&quot;applicationTime&quot;:8,&quot;atts&quot;:&quot;TRtRFVgYGBk=&quot;,&quot;errorBeacon&quot;:&quot;bam.nr-data.net&quot;,&quot;agent&quot;:&quot;&quot;}&lt;/script&gt;&lt;/body&gt;
+&lt;/html&gt;</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://blazedemo.com/</java.net.URL>
+</httpSample>
+<httpSample t="80030" lt="394" ts="1574374086642" s="false" lb="http://blazedemo.com" rc="200" rm="Embedded resource download error:http://blazedemo.com/assets/bootstrap.min.css code:Non HTTP response code: org.apache.http.ConnectionClosedException message:Non HTTP response message: Premature end of Content-Length delimited message body (expected: 126.461; received: 73.988), " tn="quick-test-ThreadStarter 1-25" dt="text" de="UTF-8" by="167926" ng="100" na="100">
+  <assertionResult>
+    <name>Timeout Check</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <httpSample t="3096" lt="394" ts="1574374086642" s="true" lb="http://blazedemo.com-0" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-25" dt="text" de="UTF-8" by="10640" ng="100" na="100">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Cache-Control: no-cache
+Content-Type: text/html; charset=UTF-8
+Date: Thu, 21 Nov 2019 22:08:06 GMT
+Server: Apache
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/</java.net.URL>
+  </httpSample>
+  <httpSample t="2811" lt="1223" ts="1574374089739" s="true" lb="http://blazedemo.com-1" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-25" dt="text" de="UTF-8" by="83593" ng="100" na="100">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Accept-Ranges: none
+Vary: Accept-Encoding
+Content-Type: text/javascript; charset=UTF-8
+Access-Control-Allow-Origin: *
+Timing-Allow-Origin: *
+Date: Thu, 21 Nov 2019 16:40:01 GMT
+Expires: Fri, 20 Nov 2020 16:40:01 GMT
+Last-Modified: Tue, 20 Dec 2016 18:17:03 GMT
+X-Content-Type-Options: nosniff
+Server: sffe
+X-XSS-Protection: 0
+Cache-Control: public, max-age=31536000, stale-while-revalidate=2592000
+Age: 19689
+Transfer-Encoding: chunked
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: ajax.googleapis.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js</java.net.URL>
+  </httpSample>
+  <httpSample t="10608" lt="1047" ts="1574374089739" s="true" lb="http://blazedemo.com-2" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-25" dt="text" de="" by="28881" ng="100" na="100">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Type: text/javascript
+Date: Thu, 21 Nov 2019 22:08:10 GMT
+Last-Modified: Mon, 20 May 2019 11:56:28 GMT
+Server: Apache
+Content-Length: 28663
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/assets/bootstrap.min.js</java.net.URL>
+  </httpSample>
+  <httpSample t="11483" lt="1401" ts="1574374089739" s="true" lb="http://blazedemo.com-3" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-25" dt="text" de="" by="39388" ng="100" na="100">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Type: text/javascript
+Date: Thu, 21 Nov 2019 22:08:11 GMT
+Last-Modified: Mon, 20 May 2019 11:56:28 GMT
+Server: Apache
+Content-Length: 39170
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/assets/bootstrap-table.js</java.net.URL>
+  </httpSample>
+  <httpSample t="76932" lt="394" ts="1574374089740" s="false" lb="http://blazedemo.com-4" rc="Non HTTP response code: org.apache.http.ConnectionClosedException" rm="Non HTTP response message: Premature end of Content-Length delimited message body (expected: 126.461; received: 73.988)" tn="quick-test-ThreadStarter 1-25" dt="text" de="" by="1449" ng="100" na="100">
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <responseData class="java.lang.String">org.apache.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 126.461; received: 73.988)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:135)
+	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:148)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.readResponse(HTTPSamplerBase.java:1850)
+	at org.apache.jmeter.protocol.http.sampler.HTTPAbstractImpl.readResponse(HTTPAbstractImpl.java:477)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:600)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:67)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase$ASyncSample.call(HTTPSamplerBase.java:2070)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase$ASyncSample.call(HTTPSamplerBase.java:2038)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</responseData>
+    <cookies class="java.lang.String"></cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://blazedemo.com/assets/bootstrap.min.css</java.net.URL>
+  </httpSample>
+  <httpSample t="1154" lt="381" ts="1574374092551" s="true" lb="http://blazedemo.com-5" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-25" dt="text" de="" by="3975" ng="100" na="100">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Type: text/css
+Date: Thu, 21 Nov 2019 22:08:12 GMT
+Last-Modified: Mon, 20 May 2019 11:56:28 GMT
+Server: Apache
+Content-Length: 3765
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/assets/bootstrap-table.css</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Cache-Control: no-cache
+Content-Type: text/html; charset=UTF-8
+Date: Thu, 21 Nov 2019 22:08:06 GMT
+Server: Apache
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+  <responseData class="java.lang.String">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;(window.NREUM||(NREUM={})).loader_config={licenseKey:&quot;338cffe5d3&quot;,applicationID:&quot;6657625&quot;};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if(&quot;function&quot;==typeof __nr_require)return __nr_require;for(var i=0;i&lt;t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n(&quot;handle&quot;),a=n(4),f=n(5),c=n(&quot;ee&quot;).get(&quot;tracer&quot;),u=n(&quot;loader&quot;),s=NREUM;&quot;undefined&quot;==typeof window.newrelic&amp;&amp;(newrelic=s);var p=[&quot;setPageViewName&quot;,&quot;setCustomAttribute&quot;,&quot;setErrorHandler&quot;,&quot;finished&quot;,&quot;addToTrace&quot;,&quot;inlineHit&quot;,&quot;addRelease&quot;],d=&quot;api-&quot;,l=d+&quot;ixn-&quot;;a(p,function(n,e){s[e]=i(d+e,!0,&quot;api&quot;)}),s.addPageAction=i(d+&quot;addPageAction&quot;,!0),s.setCurrentRouteName=i(d+&quot;routeName&quot;,!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i=&quot;function&quot;==typeof e;return o(l+&quot;tracer&quot;,[u.now(),n,t],r),function(){if(c.emit((i?&quot;&quot;:&quot;no-&quot;)+&quot;fn-start&quot;,[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit(&quot;fn-err&quot;,[arguments,this,n],t),n}finally{c.emit(&quot;fn-end&quot;,[u.now()],t)}}}};a(&quot;actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get&quot;.split(&quot;,&quot;),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){&quot;string&quot;==typeof n&amp;&amp;(n=new Error(n)),o(&quot;err&quot;,[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){&quot;first-paint&quot;===n.name?a(&quot;timing&quot;,[&quot;fp&quot;,Math.floor(n.startTime)]):&quot;first-contentful-paint&quot;===n.name&amp;&amp;a(&quot;timing&quot;,[&quot;fcp&quot;,Math.floor(n.startTime)])})}function i(n){if(n instanceof c&amp;&amp;!s){var e,t=Math.round(n.timeStamp);e=t&gt;1e12?Date.now()-t:f.now()-t,s=!0,a(&quot;timing&quot;,[&quot;fi&quot;,t,{type:n.type,fid:e}])}}if(!(&quot;init&quot;in NREUM&amp;&amp;&quot;page_view_timing&quot;in NREUM.init&amp;&amp;&quot;enabled&quot;in NREUM.init.page_view_timing&amp;&amp;NREUM.init.page_view_timing.enabled===!1)){var o,a=n(&quot;handle&quot;),f=n(&quot;loader&quot;),c=NREUM.o.EV;if(&quot;PerformanceObserver&quot;in window&amp;&amp;&quot;function&quot;==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:[&quot;paint&quot;]})}catch(u){}}if(&quot;addEventListener&quot;in document){var s=!1,p=[&quot;click&quot;,&quot;keydown&quot;,&quot;mousedown&quot;,&quot;pointerdown&quot;,&quot;touchstart&quot;];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split(&quot;.&quot;),r=e.split(&quot;.&quot;),a=0;a&lt;r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&amp;&amp;f.indexOf(&quot;Chrome&quot;)===-1&amp;&amp;f.indexOf(&quot;Chromium&quot;)===-1&amp;&amp;(i=&quot;Safari&quot;,o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r=&quot;&quot;,o=0;for(r in n)i.call(n,r)&amp;&amp;(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),&quot;undefined&quot;==typeof t&amp;&amp;(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i&lt;0?0:i);++r&lt;i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:&quot;undefined&quot;!=typeof window.performance&amp;&amp;window.performance.timing&amp;&amp;&quot;undefined&quot;!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&amp;&amp;n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&amp;&amp;n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u&lt;c;u++)f[u].apply(a,r);var p=s[y[t]];return p&amp;&amp;p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r&lt;t.length;r++)t[r]===e&amp;&amp;t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||&quot;feature&quot;,y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&amp;&amp;(d.aborted=!0,s=d.backlog={})}var f=&quot;nr@context&quot;,c=n(&quot;gos&quot;),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&amp;&amp;Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n(&quot;ee&quot;).get(&quot;handle&quot;);e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||&quot;object&quot;!==e&amp;&amp;&quot;function&quot;!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o=&quot;nr@id&quot;,a=n(&quot;gos&quot;);e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName(&quot;script&quot;)[0];if(setTimeout(s.abort,3e4),!(n&amp;&amp;n.licenseKey&amp;&amp;n.applicationID&amp;&amp;e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c(&quot;mark&quot;,[&quot;onload&quot;,a()+E.offset],null,&quot;api&quot;);var t=l.createElement(&quot;script&quot;);t.src=&quot;https://&quot;+n.agent,e.parentNode.insertBefore(t,e)}}function i(){&quot;complete&quot;===l.readyState&amp;&amp;o()}function o(){c(&quot;mark&quot;,[&quot;domContent&quot;,a()+E.offset],null,&quot;api&quot;)}function a(){return O.exists&amp;&amp;performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n(&quot;handle&quot;),u=n(4),s=n(&quot;ee&quot;),p=n(3),d=window,l=d.document,m=&quot;addEventListener&quot;,v=&quot;attachEvent&quot;,g=d.XMLHttpRequest,w=g&amp;&amp;g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=&quot;&quot;+location,y={beacon:&quot;bam.nr-data.net&quot;,errorBeacon:&quot;bam.nr-data.net&quot;,agent:&quot;js-agent.newrelic.com/nr-1153.min.js&quot;},b=g&amp;&amp;w&amp;&amp;w[m]&amp;&amp;!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m](&quot;DOMContentLoaded&quot;,o,!1),d[m](&quot;load&quot;,r,!1)):(l[v](&quot;onreadystatechange&quot;,i),d[v](&quot;onload&quot;,r)),c(&quot;mark&quot;,[&quot;firstbyte&quot;,f],null,&quot;api&quot;);var x=0,O=n(6)},{}],&quot;wrap-function&quot;:[function(n,e,t){function r(n){return!(n&amp;&amp;n instanceof Function&amp;&amp;n.apply&amp;&amp;!n[a])}var i=n(&quot;ee&quot;),o=n(5),a=&quot;nr@original&quot;,f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f=&quot;function&quot;==typeof t?t(r,a):t||{}}catch(u){d([u,&quot;&quot;,[r,a,i],f])}s(e+&quot;start&quot;,[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+&quot;err&quot;,[r,a,p],f),p}finally{s(e+&quot;end&quot;,[r,a,c],f)}}return r(n)?n:(e||(e=&quot;&quot;),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i=&quot;&quot;);var a,f,c,u=&quot;-&quot;===i.charAt(0);for(c=0;c&lt;e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&amp;&amp;Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&amp;&amp;(e[i]=n[i]);return e}function d(e){try{n.emit(&quot;internal-error&quot;,e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},[&quot;loader&quot;]);&lt;/script&gt;
+    &lt;title&gt; BlazeDemo&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;BlazeMeter demo app&quot;&gt;
+    &lt;meta name=&quot;sage&quot; content=&quot;flights app&quot;&gt;
+
+    &lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/assets/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/assets/bootstrap-table.js&quot;&gt;&lt;/script&gt;
+    &lt;link href=&quot;/assets/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
+    &lt;link href=&quot;/assets/bootstrap-table.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        body {
+            background: #f5f5f5);
+        }
+
+        .hero-unit {
+            background-color: #fff;
+        }
+
+        .center {
+            display: block;
+            margin: 0 auto;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+        &lt;div class=&quot;navbar navbar-inverse&quot;&gt;
+        &lt;div class=&quot;navbar-inner&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;a class=&quot;btn btn-navbar&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.nav-collapse&quot;&gt;
+                    &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;a class=&quot;brand&quot; href=&quot;index.php&quot;&gt;Travel The World&lt;/a&gt;
+                &lt;a class=&quot;brand&quot; href=&quot;home&quot;&gt;home&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+
+    &lt;div class=&quot;jumbotron&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;h1&gt;Welcome to the Simple Travel Agency!&lt;/h1&gt;
+            &lt;p&gt;The is a sample site you can test with BlazeMeter! &lt;/p&gt;
+            &lt;p&gt;Check out our &lt;a href=&quot;vacation.html&quot;&gt;destination of the week! The Beach!&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;div class=&quot;container&quot;&gt;
+        &lt;h2&gt;Choose your departure city:&lt;/h2&gt;
+    &lt;form action=&quot;reserve.php&quot; method=&quot;post&quot;&gt;
+        &lt;select name=&quot;fromPort&quot; class=&quot;form-inline&quot;&gt;
+            &lt;option value=&quot;Paris&quot;&gt;Paris&lt;/option&gt;
+            &lt;option value=&quot;Philadelphia&quot;&gt;Philadelphia&lt;/option&gt;
+            &lt;option value=&quot;Boston&quot;&gt;Boston&lt;/option&gt;
+            &lt;option value=&quot;Portland&quot;&gt;Portland&lt;/option&gt;
+            &lt;option value=&quot;San Diego&quot;&gt;San Diego&lt;/option&gt;
+            &lt;option value=&quot;Mexico City&quot;&gt;Mexico City&lt;/option&gt;
+            &lt;option value=&quot;São Paolo&quot;&gt;São Paolo&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;p&gt;
+        &lt;h2&gt;Choose your destination city:&lt;/h2&gt;
+        &lt;select name=&quot;toPort&quot; class=&quot;form-inline&quot;&gt;
+            &lt;option value=&quot;Buenos Aires&quot;&gt;Buenos Aires&lt;/option&gt;
+            &lt;option value=&quot;Rome&quot;&gt;Rome&lt;/option&gt;
+            &lt;option value=&quot;London&quot;&gt;London&lt;/option&gt;
+            &lt;option value=&quot;Berlin&quot;&gt;Berlin&lt;/option&gt;
+            &lt;option value=&quot;New York&quot;&gt;New York&lt;/option&gt;
+            &lt;option value=&quot;Dublin&quot;&gt;Dublin&lt;/option&gt;
+            &lt;option value=&quot;Cairo&quot;&gt;Cairo&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;p&gt;&lt;/p&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;input type=&quot;submit&quot; class=&quot;btn btn-primary&quot; value=&quot;Find Flights&quot;/&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;window.NREUM||(NREUM={});NREUM.info={&quot;beacon&quot;:&quot;bam.nr-data.net&quot;,&quot;licenseKey&quot;:&quot;338cffe5d3&quot;,&quot;applicationID&quot;:&quot;6657625&quot;,&quot;transactionName&quot;:&quot;YVxSYxACCxcEVRFfWlgWcVQWCgoKSg==&quot;,&quot;queueTime&quot;:0,&quot;applicationTime&quot;:9,&quot;atts&quot;:&quot;TRtRFVgYGBk=&quot;,&quot;errorBeacon&quot;:&quot;bam.nr-data.net&quot;,&quot;agent&quot;:&quot;&quot;}&lt;/script&gt;&lt;/body&gt;
+&lt;/html&gt;</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://blazedemo.com/</java.net.URL>
+</httpSample>
+<httpSample t="137079" lt="2462" ts="1574374169774" s="false" lb="http://blazedemo.com" rc="200" rm="Embedded resource download error:http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js code:Non HTTP response code: java.net.SocketException message:Non HTTP response message: La red es inaccesible (connect failed), " tn="quick-test-ThreadStarter 1-22" dt="text" de="UTF-8" by="212106" ng="59" na="59">
+  <assertionResult>
+    <name>Timeout Check</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <httpSample t="7732" lt="2462" ts="1574374169774" s="true" lb="http://blazedemo.com-0" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-22" dt="text" de="UTF-8" by="10641" ng="59" na="59">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Cache-Control: no-cache
+Content-Type: text/html; charset=UTF-8
+Date: Thu, 21 Nov 2019 22:09:31 GMT
+Server: Apache
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/</java.net.URL>
+  </httpSample>
+  <httpSample t="129346" lt="0" ts="1574374177507" s="false" lb="http://blazedemo.com-1" rc="Non HTTP response code: java.net.SocketException" rm="Non HTTP response message: La red es inaccesible (connect failed)" tn="quick-test-ThreadStarter 1-22" dt="text" de="" by="2548" ng="59" na="59">
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: ajax.googleapis.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <responseData class="java.lang.String">java.net.SocketException: La red es inaccesible (connect failed)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:336)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:843)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:574)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:67)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase$ASyncSample.call(HTTPSamplerBase.java:2070)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase$ASyncSample.call(HTTPSamplerBase.java:2038)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</responseData>
+    <cookies class="java.lang.String"></cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js</java.net.URL>
+  </httpSample>
+  <httpSample t="38660" lt="33081" ts="1574374177508" s="true" lb="http://blazedemo.com-2" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-22" dt="text" de="" by="28881" ng="59" na="59">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Type: text/javascript
+Date: Thu, 21 Nov 2019 22:10:10 GMT
+Last-Modified: Mon, 20 May 2019 11:56:28 GMT
+Server: Apache
+Content-Length: 28663
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/assets/bootstrap.min.js</java.net.URL>
+  </httpSample>
+  <httpSample t="9291" lt="7527" ts="1574374177508" s="true" lb="http://blazedemo.com-3" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-22" dt="text" de="" by="39388" ng="59" na="59">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Type: text/javascript
+Date: Thu, 21 Nov 2019 22:09:44 GMT
+Last-Modified: Mon, 20 May 2019 11:56:28 GMT
+Server: Apache
+Content-Length: 39170
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/assets/bootstrap-table.js</java.net.URL>
+  </httpSample>
+  <httpSample t="44429" lt="32835" ts="1574374177509" s="true" lb="http://blazedemo.com-4" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-22" dt="text" de="" by="126673" ng="59" na="59">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Type: text/css
+Date: Thu, 21 Nov 2019 22:10:10 GMT
+Last-Modified: Mon, 20 May 2019 11:56:28 GMT
+Server: Apache
+Content-Length: 126461
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/assets/bootstrap.min.css</java.net.URL>
+  </httpSample>
+  <httpSample t="12133" lt="12133" ts="1574374186799" s="true" lb="http://blazedemo.com-5" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-22" dt="text" de="" by="3975" ng="59" na="59">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Type: text/css
+Date: Thu, 21 Nov 2019 22:09:58 GMT
+Last-Modified: Mon, 20 May 2019 11:56:28 GMT
+Server: Apache
+Content-Length: 3765
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/assets/bootstrap-table.css</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Cache-Control: no-cache
+Content-Type: text/html; charset=UTF-8
+Date: Thu, 21 Nov 2019 22:09:31 GMT
+Server: Apache
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+  <responseData class="java.lang.String">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;(window.NREUM||(NREUM={})).loader_config={licenseKey:&quot;338cffe5d3&quot;,applicationID:&quot;6657625&quot;};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if(&quot;function&quot;==typeof __nr_require)return __nr_require;for(var i=0;i&lt;t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n(&quot;handle&quot;),a=n(4),f=n(5),c=n(&quot;ee&quot;).get(&quot;tracer&quot;),u=n(&quot;loader&quot;),s=NREUM;&quot;undefined&quot;==typeof window.newrelic&amp;&amp;(newrelic=s);var p=[&quot;setPageViewName&quot;,&quot;setCustomAttribute&quot;,&quot;setErrorHandler&quot;,&quot;finished&quot;,&quot;addToTrace&quot;,&quot;inlineHit&quot;,&quot;addRelease&quot;],d=&quot;api-&quot;,l=d+&quot;ixn-&quot;;a(p,function(n,e){s[e]=i(d+e,!0,&quot;api&quot;)}),s.addPageAction=i(d+&quot;addPageAction&quot;,!0),s.setCurrentRouteName=i(d+&quot;routeName&quot;,!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i=&quot;function&quot;==typeof e;return o(l+&quot;tracer&quot;,[u.now(),n,t],r),function(){if(c.emit((i?&quot;&quot;:&quot;no-&quot;)+&quot;fn-start&quot;,[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit(&quot;fn-err&quot;,[arguments,this,n],t),n}finally{c.emit(&quot;fn-end&quot;,[u.now()],t)}}}};a(&quot;actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get&quot;.split(&quot;,&quot;),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){&quot;string&quot;==typeof n&amp;&amp;(n=new Error(n)),o(&quot;err&quot;,[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){&quot;first-paint&quot;===n.name?a(&quot;timing&quot;,[&quot;fp&quot;,Math.floor(n.startTime)]):&quot;first-contentful-paint&quot;===n.name&amp;&amp;a(&quot;timing&quot;,[&quot;fcp&quot;,Math.floor(n.startTime)])})}function i(n){if(n instanceof c&amp;&amp;!s){var e,t=Math.round(n.timeStamp);e=t&gt;1e12?Date.now()-t:f.now()-t,s=!0,a(&quot;timing&quot;,[&quot;fi&quot;,t,{type:n.type,fid:e}])}}if(!(&quot;init&quot;in NREUM&amp;&amp;&quot;page_view_timing&quot;in NREUM.init&amp;&amp;&quot;enabled&quot;in NREUM.init.page_view_timing&amp;&amp;NREUM.init.page_view_timing.enabled===!1)){var o,a=n(&quot;handle&quot;),f=n(&quot;loader&quot;),c=NREUM.o.EV;if(&quot;PerformanceObserver&quot;in window&amp;&amp;&quot;function&quot;==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:[&quot;paint&quot;]})}catch(u){}}if(&quot;addEventListener&quot;in document){var s=!1,p=[&quot;click&quot;,&quot;keydown&quot;,&quot;mousedown&quot;,&quot;pointerdown&quot;,&quot;touchstart&quot;];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split(&quot;.&quot;),r=e.split(&quot;.&quot;),a=0;a&lt;r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&amp;&amp;f.indexOf(&quot;Chrome&quot;)===-1&amp;&amp;f.indexOf(&quot;Chromium&quot;)===-1&amp;&amp;(i=&quot;Safari&quot;,o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r=&quot;&quot;,o=0;for(r in n)i.call(n,r)&amp;&amp;(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),&quot;undefined&quot;==typeof t&amp;&amp;(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i&lt;0?0:i);++r&lt;i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:&quot;undefined&quot;!=typeof window.performance&amp;&amp;window.performance.timing&amp;&amp;&quot;undefined&quot;!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&amp;&amp;n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&amp;&amp;n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u&lt;c;u++)f[u].apply(a,r);var p=s[y[t]];return p&amp;&amp;p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r&lt;t.length;r++)t[r]===e&amp;&amp;t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||&quot;feature&quot;,y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&amp;&amp;(d.aborted=!0,s=d.backlog={})}var f=&quot;nr@context&quot;,c=n(&quot;gos&quot;),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&amp;&amp;Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n(&quot;ee&quot;).get(&quot;handle&quot;);e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||&quot;object&quot;!==e&amp;&amp;&quot;function&quot;!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o=&quot;nr@id&quot;,a=n(&quot;gos&quot;);e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName(&quot;script&quot;)[0];if(setTimeout(s.abort,3e4),!(n&amp;&amp;n.licenseKey&amp;&amp;n.applicationID&amp;&amp;e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c(&quot;mark&quot;,[&quot;onload&quot;,a()+E.offset],null,&quot;api&quot;);var t=l.createElement(&quot;script&quot;);t.src=&quot;https://&quot;+n.agent,e.parentNode.insertBefore(t,e)}}function i(){&quot;complete&quot;===l.readyState&amp;&amp;o()}function o(){c(&quot;mark&quot;,[&quot;domContent&quot;,a()+E.offset],null,&quot;api&quot;)}function a(){return O.exists&amp;&amp;performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n(&quot;handle&quot;),u=n(4),s=n(&quot;ee&quot;),p=n(3),d=window,l=d.document,m=&quot;addEventListener&quot;,v=&quot;attachEvent&quot;,g=d.XMLHttpRequest,w=g&amp;&amp;g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=&quot;&quot;+location,y={beacon:&quot;bam.nr-data.net&quot;,errorBeacon:&quot;bam.nr-data.net&quot;,agent:&quot;js-agent.newrelic.com/nr-1153.min.js&quot;},b=g&amp;&amp;w&amp;&amp;w[m]&amp;&amp;!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m](&quot;DOMContentLoaded&quot;,o,!1),d[m](&quot;load&quot;,r,!1)):(l[v](&quot;onreadystatechange&quot;,i),d[v](&quot;onload&quot;,r)),c(&quot;mark&quot;,[&quot;firstbyte&quot;,f],null,&quot;api&quot;);var x=0,O=n(6)},{}],&quot;wrap-function&quot;:[function(n,e,t){function r(n){return!(n&amp;&amp;n instanceof Function&amp;&amp;n.apply&amp;&amp;!n[a])}var i=n(&quot;ee&quot;),o=n(5),a=&quot;nr@original&quot;,f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f=&quot;function&quot;==typeof t?t(r,a):t||{}}catch(u){d([u,&quot;&quot;,[r,a,i],f])}s(e+&quot;start&quot;,[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+&quot;err&quot;,[r,a,p],f),p}finally{s(e+&quot;end&quot;,[r,a,c],f)}}return r(n)?n:(e||(e=&quot;&quot;),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i=&quot;&quot;);var a,f,c,u=&quot;-&quot;===i.charAt(0);for(c=0;c&lt;e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&amp;&amp;Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&amp;&amp;(e[i]=n[i]);return e}function d(e){try{n.emit(&quot;internal-error&quot;,e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},[&quot;loader&quot;]);&lt;/script&gt;
+    &lt;title&gt; BlazeDemo&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;BlazeMeter demo app&quot;&gt;
+    &lt;meta name=&quot;sage&quot; content=&quot;flights app&quot;&gt;
+
+    &lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/assets/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/assets/bootstrap-table.js&quot;&gt;&lt;/script&gt;
+    &lt;link href=&quot;/assets/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
+    &lt;link href=&quot;/assets/bootstrap-table.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        body {
+            background: #f5f5f5);
+        }
+
+        .hero-unit {
+            background-color: #fff;
+        }
+
+        .center {
+            display: block;
+            margin: 0 auto;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+        &lt;div class=&quot;navbar navbar-inverse&quot;&gt;
+        &lt;div class=&quot;navbar-inner&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;a class=&quot;btn btn-navbar&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.nav-collapse&quot;&gt;
+                    &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;a class=&quot;brand&quot; href=&quot;index.php&quot;&gt;Travel The World&lt;/a&gt;
+                &lt;a class=&quot;brand&quot; href=&quot;home&quot;&gt;home&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+
+    &lt;div class=&quot;jumbotron&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;h1&gt;Welcome to the Simple Travel Agency!&lt;/h1&gt;
+            &lt;p&gt;The is a sample site you can test with BlazeMeter! &lt;/p&gt;
+            &lt;p&gt;Check out our &lt;a href=&quot;vacation.html&quot;&gt;destination of the week! The Beach!&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;div class=&quot;container&quot;&gt;
+        &lt;h2&gt;Choose your departure city:&lt;/h2&gt;
+    &lt;form action=&quot;reserve.php&quot; method=&quot;post&quot;&gt;
+        &lt;select name=&quot;fromPort&quot; class=&quot;form-inline&quot;&gt;
+            &lt;option value=&quot;Paris&quot;&gt;Paris&lt;/option&gt;
+            &lt;option value=&quot;Philadelphia&quot;&gt;Philadelphia&lt;/option&gt;
+            &lt;option value=&quot;Boston&quot;&gt;Boston&lt;/option&gt;
+            &lt;option value=&quot;Portland&quot;&gt;Portland&lt;/option&gt;
+            &lt;option value=&quot;San Diego&quot;&gt;San Diego&lt;/option&gt;
+            &lt;option value=&quot;Mexico City&quot;&gt;Mexico City&lt;/option&gt;
+            &lt;option value=&quot;São Paolo&quot;&gt;São Paolo&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;p&gt;
+        &lt;h2&gt;Choose your destination city:&lt;/h2&gt;
+        &lt;select name=&quot;toPort&quot; class=&quot;form-inline&quot;&gt;
+            &lt;option value=&quot;Buenos Aires&quot;&gt;Buenos Aires&lt;/option&gt;
+            &lt;option value=&quot;Rome&quot;&gt;Rome&lt;/option&gt;
+            &lt;option value=&quot;London&quot;&gt;London&lt;/option&gt;
+            &lt;option value=&quot;Berlin&quot;&gt;Berlin&lt;/option&gt;
+            &lt;option value=&quot;New York&quot;&gt;New York&lt;/option&gt;
+            &lt;option value=&quot;Dublin&quot;&gt;Dublin&lt;/option&gt;
+            &lt;option value=&quot;Cairo&quot;&gt;Cairo&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;p&gt;&lt;/p&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;input type=&quot;submit&quot; class=&quot;btn btn-primary&quot; value=&quot;Find Flights&quot;/&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;window.NREUM||(NREUM={});NREUM.info={&quot;beacon&quot;:&quot;bam.nr-data.net&quot;,&quot;licenseKey&quot;:&quot;338cffe5d3&quot;,&quot;applicationID&quot;:&quot;6657625&quot;,&quot;transactionName&quot;:&quot;YVxSYxACCxcEVRFfWlgWcVQWCgoKSg==&quot;,&quot;queueTime&quot;:0,&quot;applicationTime&quot;:11,&quot;atts&quot;:&quot;TRtRFVgYGBk=&quot;,&quot;errorBeacon&quot;:&quot;bam.nr-data.net&quot;,&quot;agent&quot;:&quot;&quot;}&lt;/script&gt;&lt;/body&gt;
+&lt;/html&gt;</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://blazedemo.com/</java.net.URL>
+</httpSample>
+<httpSample t="138920" lt="2467" ts="1574374173765" s="false" lb="http://blazedemo.com" rc="200" rm="Embedded resource download error:http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js code:Non HTTP response code: java.net.SocketException message:Non HTTP response message: La red es inaccesible (connect failed), " tn="quick-test-ThreadStarter 1-21" dt="text" de="UTF-8" by="212105" ng="44" na="44">
+  <assertionResult>
+    <name>Timeout Check</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <httpSample t="5900" lt="2467" ts="1574374173765" s="true" lb="http://blazedemo.com-0" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-21" dt="text" de="UTF-8" by="10640" ng="44" na="44">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Cache-Control: no-cache
+Content-Type: text/html; charset=UTF-8
+Date: Thu, 21 Nov 2019 22:09:36 GMT
+Server: Apache
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/</java.net.URL>
+  </httpSample>
+  <httpSample t="131191" lt="0" ts="1574374179666" s="false" lb="http://blazedemo.com-1" rc="Non HTTP response code: java.net.SocketException" rm="Non HTTP response message: La red es inaccesible (connect failed)" tn="quick-test-ThreadStarter 1-21" dt="text" de="" by="2548" ng="44" na="44">
+    <responseHeader class="java.lang.String"></responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: ajax.googleapis.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <responseData class="java.lang.String">java.net.SocketException: La red es inaccesible (connect failed)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:336)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:843)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:574)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:67)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase$ASyncSample.call(HTTPSamplerBase.java:2070)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase$ASyncSample.call(HTTPSamplerBase.java:2038)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</responseData>
+    <cookies class="java.lang.String"></cookies>
+    <method class="java.lang.String">GET</method>
+    <queryString class="java.lang.String"></queryString>
+    <java.net.URL>http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js</java.net.URL>
+  </httpSample>
+  <httpSample t="131956" lt="131564" ts="1574374179666" s="true" lb="http://blazedemo.com-2" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-21" dt="text" de="" by="28881" ng="44" na="44">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Type: text/javascript
+Date: Thu, 21 Nov 2019 22:11:51 GMT
+Last-Modified: Mon, 20 May 2019 11:56:28 GMT
+Server: Apache
+Content-Length: 28663
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/assets/bootstrap.min.js</java.net.URL>
+  </httpSample>
+  <httpSample t="131970" lt="131576" ts="1574374179666" s="true" lb="http://blazedemo.com-3" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-21" dt="text" de="" by="39388" ng="44" na="44">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Type: text/javascript
+Date: Thu, 21 Nov 2019 22:11:51 GMT
+Last-Modified: Mon, 20 May 2019 11:56:28 GMT
+Server: Apache
+Content-Length: 39170
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/assets/bootstrap-table.js</java.net.URL>
+  </httpSample>
+  <httpSample t="133019" lt="131569" ts="1574374179666" s="true" lb="http://blazedemo.com-4" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-21" dt="text" de="" by="126673" ng="44" na="44">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Type: text/css
+Date: Thu, 21 Nov 2019 22:11:51 GMT
+Last-Modified: Mon, 20 May 2019 11:56:28 GMT
+Server: Apache
+Content-Length: 126461
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/assets/bootstrap.min.css</java.net.URL>
+  </httpSample>
+  <httpSample t="382" lt="382" ts="1574374310858" s="true" lb="http://blazedemo.com-5" rc="200" rm="OK" tn="quick-test-ThreadStarter 1-21" dt="text" de="" by="3975" ng="44" na="44">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Type: text/css
+Date: Thu, 21 Nov 2019 22:11:51 GMT
+Last-Modified: Mon, 20 May 2019 11:56:28 GMT
+Server: Apache
+Content-Length: 3765
+Connection: keep-alive
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+    <java.net.URL>http://blazedemo.com/assets/bootstrap-table.css</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Cache-Control: no-cache
+Content-Type: text/html; charset=UTF-8
+Date: Thu, 21 Nov 2019 22:09:36 GMT
+Server: Apache
+transfer-encoding: chunked
+Connection: keep-alive
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+  <responseData class="java.lang.String">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;(window.NREUM||(NREUM={})).loader_config={licenseKey:&quot;338cffe5d3&quot;,applicationID:&quot;6657625&quot;};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if(&quot;function&quot;==typeof __nr_require)return __nr_require;for(var i=0;i&lt;t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n(&quot;handle&quot;),a=n(4),f=n(5),c=n(&quot;ee&quot;).get(&quot;tracer&quot;),u=n(&quot;loader&quot;),s=NREUM;&quot;undefined&quot;==typeof window.newrelic&amp;&amp;(newrelic=s);var p=[&quot;setPageViewName&quot;,&quot;setCustomAttribute&quot;,&quot;setErrorHandler&quot;,&quot;finished&quot;,&quot;addToTrace&quot;,&quot;inlineHit&quot;,&quot;addRelease&quot;],d=&quot;api-&quot;,l=d+&quot;ixn-&quot;;a(p,function(n,e){s[e]=i(d+e,!0,&quot;api&quot;)}),s.addPageAction=i(d+&quot;addPageAction&quot;,!0),s.setCurrentRouteName=i(d+&quot;routeName&quot;,!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i=&quot;function&quot;==typeof e;return o(l+&quot;tracer&quot;,[u.now(),n,t],r),function(){if(c.emit((i?&quot;&quot;:&quot;no-&quot;)+&quot;fn-start&quot;,[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit(&quot;fn-err&quot;,[arguments,this,n],t),n}finally{c.emit(&quot;fn-end&quot;,[u.now()],t)}}}};a(&quot;actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get&quot;.split(&quot;,&quot;),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){&quot;string&quot;==typeof n&amp;&amp;(n=new Error(n)),o(&quot;err&quot;,[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){&quot;first-paint&quot;===n.name?a(&quot;timing&quot;,[&quot;fp&quot;,Math.floor(n.startTime)]):&quot;first-contentful-paint&quot;===n.name&amp;&amp;a(&quot;timing&quot;,[&quot;fcp&quot;,Math.floor(n.startTime)])})}function i(n){if(n instanceof c&amp;&amp;!s){var e,t=Math.round(n.timeStamp);e=t&gt;1e12?Date.now()-t:f.now()-t,s=!0,a(&quot;timing&quot;,[&quot;fi&quot;,t,{type:n.type,fid:e}])}}if(!(&quot;init&quot;in NREUM&amp;&amp;&quot;page_view_timing&quot;in NREUM.init&amp;&amp;&quot;enabled&quot;in NREUM.init.page_view_timing&amp;&amp;NREUM.init.page_view_timing.enabled===!1)){var o,a=n(&quot;handle&quot;),f=n(&quot;loader&quot;),c=NREUM.o.EV;if(&quot;PerformanceObserver&quot;in window&amp;&amp;&quot;function&quot;==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:[&quot;paint&quot;]})}catch(u){}}if(&quot;addEventListener&quot;in document){var s=!1,p=[&quot;click&quot;,&quot;keydown&quot;,&quot;mousedown&quot;,&quot;pointerdown&quot;,&quot;touchstart&quot;];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split(&quot;.&quot;),r=e.split(&quot;.&quot;),a=0;a&lt;r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&amp;&amp;f.indexOf(&quot;Chrome&quot;)===-1&amp;&amp;f.indexOf(&quot;Chromium&quot;)===-1&amp;&amp;(i=&quot;Safari&quot;,o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r=&quot;&quot;,o=0;for(r in n)i.call(n,r)&amp;&amp;(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),&quot;undefined&quot;==typeof t&amp;&amp;(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i&lt;0?0:i);++r&lt;i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:&quot;undefined&quot;!=typeof window.performance&amp;&amp;window.performance.timing&amp;&amp;&quot;undefined&quot;!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&amp;&amp;n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&amp;&amp;n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u&lt;c;u++)f[u].apply(a,r);var p=s[y[t]];return p&amp;&amp;p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r&lt;t.length;r++)t[r]===e&amp;&amp;t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||&quot;feature&quot;,y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&amp;&amp;(d.aborted=!0,s=d.backlog={})}var f=&quot;nr@context&quot;,c=n(&quot;gos&quot;),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&amp;&amp;Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n(&quot;ee&quot;).get(&quot;handle&quot;);e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||&quot;object&quot;!==e&amp;&amp;&quot;function&quot;!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o=&quot;nr@id&quot;,a=n(&quot;gos&quot;);e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName(&quot;script&quot;)[0];if(setTimeout(s.abort,3e4),!(n&amp;&amp;n.licenseKey&amp;&amp;n.applicationID&amp;&amp;e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c(&quot;mark&quot;,[&quot;onload&quot;,a()+E.offset],null,&quot;api&quot;);var t=l.createElement(&quot;script&quot;);t.src=&quot;https://&quot;+n.agent,e.parentNode.insertBefore(t,e)}}function i(){&quot;complete&quot;===l.readyState&amp;&amp;o()}function o(){c(&quot;mark&quot;,[&quot;domContent&quot;,a()+E.offset],null,&quot;api&quot;)}function a(){return O.exists&amp;&amp;performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n(&quot;handle&quot;),u=n(4),s=n(&quot;ee&quot;),p=n(3),d=window,l=d.document,m=&quot;addEventListener&quot;,v=&quot;attachEvent&quot;,g=d.XMLHttpRequest,w=g&amp;&amp;g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=&quot;&quot;+location,y={beacon:&quot;bam.nr-data.net&quot;,errorBeacon:&quot;bam.nr-data.net&quot;,agent:&quot;js-agent.newrelic.com/nr-1153.min.js&quot;},b=g&amp;&amp;w&amp;&amp;w[m]&amp;&amp;!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m](&quot;DOMContentLoaded&quot;,o,!1),d[m](&quot;load&quot;,r,!1)):(l[v](&quot;onreadystatechange&quot;,i),d[v](&quot;onload&quot;,r)),c(&quot;mark&quot;,[&quot;firstbyte&quot;,f],null,&quot;api&quot;);var x=0,O=n(6)},{}],&quot;wrap-function&quot;:[function(n,e,t){function r(n){return!(n&amp;&amp;n instanceof Function&amp;&amp;n.apply&amp;&amp;!n[a])}var i=n(&quot;ee&quot;),o=n(5),a=&quot;nr@original&quot;,f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f=&quot;function&quot;==typeof t?t(r,a):t||{}}catch(u){d([u,&quot;&quot;,[r,a,i],f])}s(e+&quot;start&quot;,[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+&quot;err&quot;,[r,a,p],f),p}finally{s(e+&quot;end&quot;,[r,a,c],f)}}return r(n)?n:(e||(e=&quot;&quot;),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i=&quot;&quot;);var a,f,c,u=&quot;-&quot;===i.charAt(0);for(c=0;c&lt;e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&amp;&amp;Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&amp;&amp;(e[i]=n[i]);return e}function d(e){try{n.emit(&quot;internal-error&quot;,e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},[&quot;loader&quot;]);&lt;/script&gt;
+    &lt;title&gt; BlazeDemo&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;BlazeMeter demo app&quot;&gt;
+    &lt;meta name=&quot;sage&quot; content=&quot;flights app&quot;&gt;
+
+    &lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/assets/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/assets/bootstrap-table.js&quot;&gt;&lt;/script&gt;
+    &lt;link href=&quot;/assets/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
+    &lt;link href=&quot;/assets/bootstrap-table.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        body {
+            background: #f5f5f5);
+        }
+
+        .hero-unit {
+            background-color: #fff;
+        }
+
+        .center {
+            display: block;
+            margin: 0 auto;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+        &lt;div class=&quot;navbar navbar-inverse&quot;&gt;
+        &lt;div class=&quot;navbar-inner&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;a class=&quot;btn btn-navbar&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.nav-collapse&quot;&gt;
+                    &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;a class=&quot;brand&quot; href=&quot;index.php&quot;&gt;Travel The World&lt;/a&gt;
+                &lt;a class=&quot;brand&quot; href=&quot;home&quot;&gt;home&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+
+    &lt;div class=&quot;jumbotron&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;h1&gt;Welcome to the Simple Travel Agency!&lt;/h1&gt;
+            &lt;p&gt;The is a sample site you can test with BlazeMeter! &lt;/p&gt;
+            &lt;p&gt;Check out our &lt;a href=&quot;vacation.html&quot;&gt;destination of the week! The Beach!&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;div class=&quot;container&quot;&gt;
+        &lt;h2&gt;Choose your departure city:&lt;/h2&gt;
+    &lt;form action=&quot;reserve.php&quot; method=&quot;post&quot;&gt;
+        &lt;select name=&quot;fromPort&quot; class=&quot;form-inline&quot;&gt;
+            &lt;option value=&quot;Paris&quot;&gt;Paris&lt;/option&gt;
+            &lt;option value=&quot;Philadelphia&quot;&gt;Philadelphia&lt;/option&gt;
+            &lt;option value=&quot;Boston&quot;&gt;Boston&lt;/option&gt;
+            &lt;option value=&quot;Portland&quot;&gt;Portland&lt;/option&gt;
+            &lt;option value=&quot;San Diego&quot;&gt;San Diego&lt;/option&gt;
+            &lt;option value=&quot;Mexico City&quot;&gt;Mexico City&lt;/option&gt;
+            &lt;option value=&quot;São Paolo&quot;&gt;São Paolo&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;p&gt;
+        &lt;h2&gt;Choose your destination city:&lt;/h2&gt;
+        &lt;select name=&quot;toPort&quot; class=&quot;form-inline&quot;&gt;
+            &lt;option value=&quot;Buenos Aires&quot;&gt;Buenos Aires&lt;/option&gt;
+            &lt;option value=&quot;Rome&quot;&gt;Rome&lt;/option&gt;
+            &lt;option value=&quot;London&quot;&gt;London&lt;/option&gt;
+            &lt;option value=&quot;Berlin&quot;&gt;Berlin&lt;/option&gt;
+            &lt;option value=&quot;New York&quot;&gt;New York&lt;/option&gt;
+            &lt;option value=&quot;Dublin&quot;&gt;Dublin&lt;/option&gt;
+            &lt;option value=&quot;Cairo&quot;&gt;Cairo&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;p&gt;&lt;/p&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;input type=&quot;submit&quot; class=&quot;btn btn-primary&quot; value=&quot;Find Flights&quot;/&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;window.NREUM||(NREUM={});NREUM.info={&quot;beacon&quot;:&quot;bam.nr-data.net&quot;,&quot;licenseKey&quot;:&quot;338cffe5d3&quot;,&quot;applicationID&quot;:&quot;6657625&quot;,&quot;transactionName&quot;:&quot;YVxSYxACCxcEVRFfWlgWcVQWCgoKSg==&quot;,&quot;queueTime&quot;:0,&quot;applicationTime&quot;:9,&quot;atts&quot;:&quot;TRtRFVgYGBk=&quot;,&quot;errorBeacon&quot;:&quot;bam.nr-data.net&quot;,&quot;agent&quot;:&quot;&quot;}&lt;/script&gt;&lt;/body&gt;
+&lt;/html&gt;</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://blazedemo.com/</java.net.URL>
+</httpSample>
+<httpSample t="60440" lt="0" ts="1574374256257" s="false" lb="http://blazedemo.com" rc="Non HTTP response code: java.net.SocketException" rm="Non HTTP response message: Socket closed" tn="quick-test-ThreadStarter 1-28" dt="text" de="" by="2402" ng="42" na="42">
+  <assertionResult>
+    <name>Timeout Check</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Host: blazedemo.com
+User-Agent: Apache-HttpClient/4.5.7 (Java/11.0.5)
+</requestHeader>
+  <responseData class="java.lang.String">java.net.SocketException: Socket closed
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:336)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:843)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:574)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:67)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1231)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1220)
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:622)
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:546)
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:486)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:253)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">GET</method>
+  <queryString class="java.lang.String"></queryString>
+  <java.net.URL>http://blazedemo.com/</java.net.URL>
+</httpSample>
+
+</testResults>

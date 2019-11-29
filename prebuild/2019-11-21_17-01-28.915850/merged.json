@@ -1,0 +1,17 @@
+{
+ "scenarios": {
+  "quick-test": {
+   "requests": [
+    "http://blazedemo.com"
+   ]
+  }
+ }, 
+ "execution": [
+  {
+   "ramp-up": "1m", 
+   "hold-for": "5m", 
+   "concurrency": 100, 
+   "scenario": "quick-test"
+  }
+ ]
+}

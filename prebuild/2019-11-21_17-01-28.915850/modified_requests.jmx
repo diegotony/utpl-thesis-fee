@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jmeterTestPlan>
+  <hashTree>
+    <TestPlan enabled="true" guiclass="TestPlanGui" testclass="TestPlan" testname="BZT Generated Test Plan">
+      <elementProp elementType="Arguments" guiclass="ArgumentsPanel" name="TestPlan.user_defined_variables" testclass="Arguments"/>
+    <boolProp name="TestPlan.functional_mode">false</boolProp></TestPlan>
+    <hashTree>
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup enabled="true" guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="quick-test"><elementProp elementType="com.blazemeter.jmeter.control.VirtualUserController" name="ThreadGroup.main_controller"/><stringProp name="ThreadGroup.on_sample_error">continue</stringProp><stringProp name="TargetLevel">100</stringProp><stringProp name="RampUp">60</stringProp><stringProp name="Steps">0</stringProp><stringProp name="Hold">300</stringProp><stringProp name="LogFilename"></stringProp><stringProp name="Iterations"></stringProp><stringProp name="Unit">S</stringProp></com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup><hashTree type="tg">
+        <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="Cache">
+          <boolProp name="clearEachIteration">true</boolProp>
+          <boolProp name="useExpires">true</boolProp>
+        </CacheManager>
+        <hashTree/>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="Cookies">
+          <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+          <stringProp name="CookieManager.implementation">org.apache.jmeter.protocol.http.control.HC4CookieHandler</stringProp>
+        </CookieManager>
+        <hashTree/>
+        <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager">
+          <collectionProp name="DNSCacheManager.servers"/>
+          <boolProp name="DNSCacheManager.clearEachIteration">false</boolProp>
+          <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
+        </DNSCacheManager>
+        <hashTree/>
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="Defaults">
+          <boolProp name="HTTPSampler.image_parser">true</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">4</stringProp>
+          <elementProp elementType="Arguments" guiclass="HTTPArgumentsPanel" name="HTTPsampler.Arguments" testclass="Arguments" testname="user_defined"/>
+        </ConfigTestElement>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http://blazedemo.com">
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.domain">blazedemo.com</stringProp>
+          <stringProp name="HTTPSampler.port"/>
+          <stringProp name="HTTPSampler.path"/>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <stringProp name="HTTPSampler.connect_timeout">0</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">0</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Timeout Check">
+            <stringProp name="DurationAssertion.duration">0</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false"/>
+      <hashTree/>
+    <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="KPI Writer"><stringProp name="filename">/home/tony/thesis/test/prebuild/2019-11-21_17-01-28.915850/kpi.jtl</stringProp><objProp><name>saveConfig</name><value class="SampleSaveConfiguration"><code>true</code><encoding>false</encoding><dataType>false</dataType><timestamp>true</timestamp><threadCounts>true</threadCounts><bytes>true</bytes><samplerData>false</samplerData><connectTime>true</connectTime><responseData>false</responseData><message>true</message><responseDataOnError>false</responseDataOnError><responseHeaders>false</responseHeaders><xml>false</xml><latency>true</latency><success>true</success><url>false</url><requestHeaders>false</requestHeaders><hostname>true</hostname><threadName>true</threadName><fieldNames>true</fieldNames><label>true</label><subresults>false</subresults><time>true</time><saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage><assertions>false</assertions></value></objProp></ResultCollector><hashTree/><ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="Errors Writer"><stringProp name="filename">/home/tony/thesis/test/prebuild/2019-11-21_17-01-28.915850/error.jtl</stringProp><objProp><name>saveConfig</name><value class="SampleSaveConfiguration"><code>true</code><encoding>true</encoding><dataType>true</dataType><timestamp>true</timestamp><threadCounts>true</threadCounts><samplerData>false</samplerData><assertions>true</assertions><responseData>false</responseData><message>true</message><responseDataOnError>true</responseDataOnError><responseHeaders>true</responseHeaders><xml>true</xml><latency>true</latency><success>true</success><url>true</url><requestHeaders>true</requestHeaders><threadName>true</threadName><bytes>true</bytes><fieldNames>true</fieldNames><label>true</label><subresults>true</subresults><time>true</time><saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage></value></objProp><boolProp name="ResultCollector.error_logging">true</boolProp></ResultCollector><hashTree/></hashTree>
+  </hashTree>
+</jmeterTestPlan>
