@@ -9,7 +9,7 @@ import { Model } from 'mongoose';
 import { ExecutePaymentNormal } from '../shared/dto/execute-normal.dto';
 import config from '../config/config'
 var paypal = require('paypal-rest-sdk');
-@Controller('payment')
+@Controller()
 export class PaymentController {
     constructor(@InjectModel('Payment') public readonly paymentModel: Model<CreatePaymentDto>
         , private readonly paymentService: PaymentService) {
