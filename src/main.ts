@@ -15,7 +15,7 @@ async function bootstrap() {
     .addTag('payment')
     .build();
   const document = SwaggerModule.createDocument(app, options);
-  SwaggerModule.setup('swagger/payment', app, document);
+  SwaggerModule.setup('swagger/fee', app, document);
   await app.listen(config.PORT);
 }
 bootstrap();
