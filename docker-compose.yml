@@ -15,14 +15,18 @@ services:
     networks:
       backend:
 
-  client-micro:
+  fee-micro:
     restart: always
-    image: diegotony/client-micro:travis
+    image: diegotony/fee-micro:k8s
     ports:
       - "4003:4003"
     environment:
       - MONGO_HOST=mongodb-client
       - PORT=4003
+      - MODE=sandbox
+      - CLIENT_ID=EBWKjlELKMYqRNQ6sYvFo64FtaRLRR5BdHEESmha49TM
+      - CLIENT_SECRET=EO422dn3gQLgDbuwqTjzrFgFtaRLRR5BdHEESmha49TM
+
     depends_on:
       - mongodb-client
     links:

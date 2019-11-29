@@ -4,5 +4,9 @@ export default {
     MONGO_DB:process.env.MONGO_DB || 'payment',
     REDIS_URI: process.env.REDIS_URI || 'redis://localhost:6379',
     PORT: process.env.PORT || '3041',
+    MODE : process.env.MODE || 'sandbox' ,
+    CLIENT_ID: process.env.CLIENT_ID ||'EBWKjlELKMYqRNQ6sYvFo64FtaRLRR5BdHEESmha49TM',
+    CLIENT_SECRET: process.env.CLIENT_SECRET || 'EO422dn3gQLgDbuwqTjzrFgFtaRLRR5BdHEESmha49TM'
+
 };
 

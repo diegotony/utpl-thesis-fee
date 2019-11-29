@@ -7,16 +7,16 @@ import { ApiImplicitQuery } from '@nestjs/swagger';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { ExecutePaymentNormal } from '../shared/dto/execute-normal.dto';
-
+import config from '../config/config'
 var paypal = require('paypal-rest-sdk');
 @Controller('payment')
 export class PaymentController {
     constructor(@InjectModel('Payment') public readonly paymentModel: Model<CreatePaymentDto>
         , private readonly paymentService: PaymentService) {
         paypal.configure({
-            'mode': 'sandbox',
-            'client_id': 'EBWKjlELKMYqRNQ6sYvFo64FtaRLRR5BdHEESmha49TM',
-            'client_secret': 'EO422dn3gQLgDbuwqTjzrFgFtaRLRR5BdHEESmha49TM'
+            'mode': config.MODE,
+            'client_id': config.CLIENT_ID,
+            'client_secret': config.CLIENT_SECRET
         });
     }
     @Post('paypal/execute')
