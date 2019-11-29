@@ -1,0 +1,33 @@
+sudo: required
+dist: trusty
+services:
+  - 'docker'
+  
+addons:
+  sonarcloud:
+    organization: "diegotony"
+    token:
+      secure: "UxddnEcuRNZ+MfdYmLKWtMLqELLsIA7ivFoko7Nb/3Ii3FQmHZV7MkW49ZGEf6yAfQrIBbxcTeREnXS2DTq99QZNd9ZClgqEImhuwxATPYlEzTWDUSm+/chsdSavh6BFZ6i55Tt79M7eaet5LoSHBsAJSfEHFagIlI/4o6cZHvM9sS35iek6zrLSeGzASuBDFpWfTHVT4uVN3yRXRPjoj7Po6cueXDp8CH+RcvOK6NrB9KbapasB17xOQLUBWHlRxkwSrkJ/c0bSOkWQJ1/oILoZDbRPxPttubx0ogSSuy4vPWHI1iJ+wTLbY6CeX6gmSabqrAEJ49skmCyW/wZKj6sJWD5biEXLJzXsHoUe0hJDcI6/iwpiXBqGnfZEz06CBZy3rcZOc8gLixAw77RPidImOZrLfi1a7djqeh9hGQuKebDwB9IW+TDyQR++Z34XRDaD7UOPBu+CM8YFSetghOASf94TIGgvWYD027CLUdamOJIBlDROT87QuN6qlMHhODdi2s+nfiXWJAs5ZF1tfnYS1i8YdT6h0pj6WRZ0Dta6AqHuog+wgqBAaBOm5/V0SdWgD9T54LD2MWCxg1sum/dDEiQrkHddmCoHOqLBHnfedkpGFWWENjT7RQ8IWFIuRLxD3fdcDcDaLXi2N6Way8QbAd483mfWdcurqcsUOJA=" # encrypted value of your token
+
+
+before_install:
+  - chmod +x .travis/main.sh
+  - ./.travis/main.sh
+
+before_script:
+  - 'docker-compose version'
+
+script:
+  - make test
+  - make image
+
+after_success:
+  - if [[ "$TRAVIS_BRANCH" == "master" ]]; then
+      docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD ;
+      make push-image ;
+    fi
+
+# don't notify me when things fail
+
+notifications:
+  email: true
