@@ -1,24 +1,47 @@
-import { Controller, Get, Post, Body, HttpCode, Res } from '@nestjs/common';
+import { Controller, Get, Post, Body, HttpCode, Res, Inject, Logger } from '@nestjs/common';
 import { Response } from 'express';
 import { CreatePaymentDto } from '../shared/dto/create-payment.dto';
 import { ExecutePayment } from '../shared/dto/execute.dto';
 import { PaymentService } from './payment.service';
-import { ApiImplicitQuery } from '@nestjs/swagger';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { ExecutePaymentNormal } from '../shared/dto/execute-normal.dto';
 import config from '../config/config'
+import { ClientOptions, Transport, ClientProxy, ClientProxyFactory } from '@nestjs/microservices';
+import { Client } from '@nestjs/microservices/external/nats-client.interface';
+import { threadId } from 'worker_threads';
+
+
 var paypal = require('paypal-rest-sdk');
+
 @Controller()
 export class PaymentController {
-    constructor(@InjectModel('Payment') public readonly paymentModel: Model<CreatePaymentDto>
-        , private readonly paymentService: PaymentService) {
+
+
+    constructor(
+        @InjectModel('Payment') public readonly paymentModel: Model<CreatePaymentDto>,
+        private readonly paymentService: PaymentService,) {
+
+        //  Paypal variable package
         paypal.configure({
             'mode': config.MODE,
             'client_id': config.CLIENT_ID,
             'client_secret': config.CLIENT_SECRET
         });
     }
+
+    // @Get("list")
+    // async list(){
+    //     let data ="fdfa"
+    //     this.paymentService.liste(data)
+    //     this.paymentService.list(data)
+    //     return  "oka"
+    // }
+ 
+
+
+    // HTTP
+
     @Post('paypal/execute')
     @HttpCode(200)
     async executePaypal(@Body() dto: ExecutePayment, @Res() res: Response): Promise<any> {
@@ -33,7 +56,8 @@ export class PaymentController {
                 if (payment.state == 'approved') {
                     console.log(id_payment)
                     this.paymentService.updatePayment(dto, "Completado")
-
+                    this.paymentService.findByID(id_payment)
+                    // this.paymentService.stateOrder("")
                     res.send('payment completed successfully');
 
                 } else {
@@ -43,7 +67,6 @@ export class PaymentController {
         });
 
     }
-
 
     @Post('paypal/create')
     @HttpCode(200)
@@ -87,7 +110,7 @@ export class PaymentController {
         });
 
     }
-    
+
     @Post('normal/execute')
     @HttpCode(200)
     async executeNormal(@Body() dto: ExecutePaymentNormal, @Res() res: Response): Promise<any> {
@@ -109,17 +132,16 @@ export class PaymentController {
         savePayment.status = "Pendiente"
         const createdPayment = new this.paymentModel(savePayment).save((err, data) => {
             return res.json({ "id_payment": data._id })
-
         });
-
     }
 
-
-    @Get()
+    @Get("payments")
     @HttpCode(200)
     async findAll(): Promise<any> {
         return (await this.paymentModel.find().exec())
     }
+
+
 
 
 

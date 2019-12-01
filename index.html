@@ -26,9 +26,9 @@
             // 1. Add a payment callback
             payment: function (data, actions) {
                 // 2. Make a request to your server
-                return actions.request.post('http://localhost:3000/payment/paypal/create',{
+                return actions.request.post('http://localhost:3041/paypal/create',{
                     total:"1",
-                    id_order:"518cbb1389da79d3a25453f9",
+                    id_order:"5de30ce83c471605b7a81222",
                     id_client:"518cbb1389da79d3a25453f9",
                     payType:"Paypal"
                 })
@@ -41,7 +41,7 @@
             // 1. Add an onAuthorize callback
             onAuthorize: function (data, actions) {
                 // 2. Make a request to your server
-                return actions.request.post('http://localhost:3000/payment/paypal/execute', {
+                return actions.request.post('http://localhost:3041/paypal/execute', {
                         paymentID: data.paymentID,
                         payerID: data.payerID,
                         id_payment: id_payment_return

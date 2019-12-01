@@ -6,10 +6,24 @@ import { Payment } from '../shared/dto/payment.dto';
 import { ApiImplicitParam } from '@nestjs/swagger';
 import { ExecutePayment } from '../shared/dto/execute.dto';
 import { ExecutePaymentNormal } from '../shared/dto/execute-normal.dto';
+import { ClientProxy, ClientProxyFactory, Transport, ClientOptions } from '@nestjs/microservices';
+import { Observable } from 'rxjs';
 @Injectable()
 export class PaymentService {
+  private readonly client: ClientProxy;
 
-  constructor(@InjectModel('Payment') private readonly paymentModel: Model<CreatePaymentDto>) {}
+  options: ClientOptions = {
+    transport: Transport.REDIS,
+    options: {
+      url: 'redis://localhost:6379',
+    }
+  }
+
+
+  constructor(@InjectModel('Payment') private readonly paymentModel: Model<CreatePaymentDto>) {
+    this.client = ClientProxyFactory.create(this.options)
+  }
+
 
   async createPayment(createPaymentDto: CreatePaymentDto): Promise<Payment> {
     try {
@@ -23,7 +37,7 @@ export class PaymentService {
       if (!createdPayment) {
         throw new HttpException("Upps error ..", HttpStatus.BAD_REQUEST);
       }
-      return createdPayment.save((err, payment)=>{
+      return createdPayment.save((err, payment) => {
         return payment._id
       });
     } catch (error) {
@@ -34,17 +48,34 @@ export class PaymentService {
     }
   }
 
-  async updatePayment(dto: ExecutePayment,data) {
-    return await this.paymentModel.findByIdAndUpdate(dto.id_payment, {"status":data}, {
+  async findByID(id:string){
+    return await this.paymentModel.findById(id,(err,user)=>{
+      this.stateOrder(user.id_order)
+      console.log(user)
+    }).exec();
+  }
+  async updatePayment(dto: ExecutePayment, data) {
+    return await this.paymentModel.findByIdAndUpdate(dto.id_payment, { "status": data }, {
       new: true,
       runValidators: true
     });
   }
 
-  async updatePaymentNormal(dto: ExecutePaymentNormal,data) {
-    return await this.paymentModel.findByIdAndUpdate(dto.id_payment, {"status":data}, {
+  async updatePaymentNormal(dto: ExecutePaymentNormal, data) {
+    return await this.paymentModel.findByIdAndUpdate(dto.id_payment, { "status": data }, {
       new: true,
       runValidators: true
     });
   }
+
+
+
+  async stateOrder(data) {
+    return this.client.emit<any>('stateOrder', [data])
+  }
+
+  // changeStatus(data): Observable<string>{
+  //   const pattern = { cmd: 'changeStatePago' };
+  //   return this.order.send<string>(pattern, [data]);
+  // }
 }
