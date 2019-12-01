@@ -7,10 +7,6 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { ExecutePaymentNormal } from '../shared/dto/execute-normal.dto';
 import config from '../config/config'
-import { ClientOptions, Transport, ClientProxy, ClientProxyFactory } from '@nestjs/microservices';
-import { Client } from '@nestjs/microservices/external/nats-client.interface';
-import { threadId } from 'worker_threads';
-
 
 var paypal = require('paypal-rest-sdk');
 
@@ -29,18 +25,6 @@ export class PaymentController {
             'client_secret': config.CLIENT_SECRET
         });
     }
-
-    // @Get("list")
-    // async list(){
-    //     let data ="fdfa"
-    //     this.paymentService.liste(data)
-    //     this.paymentService.list(data)
-    //     return  "oka"
-    // }
- 
-
-
-    // HTTP
 
     @Post('paypal/execute')
     @HttpCode(200)

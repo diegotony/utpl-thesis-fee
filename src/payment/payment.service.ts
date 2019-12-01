@@ -8,6 +8,7 @@ import { ExecutePayment } from '../shared/dto/execute.dto';
 import { ExecutePaymentNormal } from '../shared/dto/execute-normal.dto';
 import { ClientProxy, ClientProxyFactory, Transport, ClientOptions } from '@nestjs/microservices';
 import { Observable } from 'rxjs';
+import config from '../config/config';
 @Injectable()
 export class PaymentService {
   private readonly client: ClientProxy;
@@ -15,7 +16,7 @@ export class PaymentService {
   options: ClientOptions = {
     transport: Transport.REDIS,
     options: {
-      url: 'redis://localhost:6379',
+      url: 'redis://'+config.REDIS_HOST+':6379',
     }
   }
 
