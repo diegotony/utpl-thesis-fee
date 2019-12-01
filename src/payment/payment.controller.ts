@@ -99,6 +99,7 @@ export class PaymentController {
     @HttpCode(200)
     async executeNormal(@Body() dto: ExecutePaymentNormal, @Res() res: Response): Promise<any> {
         this.paymentService.updatePaymentNormal(dto, "Completado")
+        this.paymentService.findByID(dto.id_payment)
         res.send('payment completed successfully');
     }
 
