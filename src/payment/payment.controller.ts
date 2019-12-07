@@ -125,6 +125,18 @@ export class PaymentController {
         return (await this.paymentModel.find().exec())
     }
 
+    @Get("test")
+    @HttpCode(200)
+    async test(): Promise<any> {
+        return (await this.paymentService.test())
+    }
+
+    @Get("test2")
+    @HttpCode(200)
+    async test2(): Promise<any> {
+        return (await this.paymentService.test2())
+    }
+
 
 
 

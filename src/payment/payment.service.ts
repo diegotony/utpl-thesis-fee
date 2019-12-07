@@ -74,6 +74,15 @@ export class PaymentService {
     return this.client.emit<any>('stateOrder', [data])
   }
 
+
+  async test() {
+    return this.client.emit<any>('holiEvent', [])
+  }
+
+  async test2() {
+    return this.client.send<any>('holiPattern', [])
+  }
+
   // changeStatus(data): Observable<string>{
   //   const pattern = { cmd: 'changeStatePago' };
   //   return this.order.send<string>(pattern, [data]);
