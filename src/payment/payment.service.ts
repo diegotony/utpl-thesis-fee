@@ -28,6 +28,7 @@ export class PaymentService {
 
   async createPayment(createPaymentDto: CreatePaymentDto): Promise<Payment> {
     try {
+      
       const payment = new CreatePaymentDto();
       payment.id_client = createPaymentDto.id_client;
       payment.id_order = createPaymentDto.id_order;
@@ -68,8 +69,6 @@ export class PaymentService {
       runValidators: true
     });
   }
-
-
 
   async stateOrder(data) {
     return this.client.emit<any>('stateOrder', [data])

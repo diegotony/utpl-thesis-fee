@@ -41,7 +41,6 @@ export class PaymentController {
                     console.log(id_payment)
                     this.paymentService.updatePayment(dto, "Completado")
                     this.paymentService.findByID(id_payment)
-                    // this.paymentService.stateOrder("")
                     res.send('payment completed successfully');
 
                 } else {
