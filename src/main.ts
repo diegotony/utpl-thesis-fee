@@ -25,7 +25,7 @@ async function bootstrap() {
     .setTitle('Payment Api')
     .setDescription('The payment API description')
     .setVersion('1.0')
-    .addTag('payment')
+    .addTag('payments')
     .build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('swagger/fee', app, document);

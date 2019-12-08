@@ -27,9 +27,9 @@
             payment: function (data, actions) {
                 // 2. Make a request to your server
                 return actions.request.post('http://localhost:3041/paypal/create',{
-                    total:"1",
-                    id_order:"5de5facc8e17a07c2efaad98",
-                    id_client:"5de02c83accce83435f4493a",
+                    total:"3",
+                    id_order:"5dec487a89a3250011e0bf64",
+                    id_client:"5dec4705d260ee001af586d5",
                     payType:"Paypal"
                 })
                     .then(function (res) {

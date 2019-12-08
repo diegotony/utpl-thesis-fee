@@ -7,17 +7,17 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { ExecutePaymentNormal } from '../shared/dto/execute-normal.dto';
 import config from '../config/config'
+import { ApiUseTags } from '@nestjs/swagger';
 
 var paypal = require('paypal-rest-sdk');
+
 
 @Controller()
 export class PaymentController {
 
-
     constructor(
         @InjectModel('Payment') public readonly paymentModel: Model<CreatePaymentDto>,
         private readonly paymentService: PaymentService,) {
-
         //  Paypal variable package
         paypal.configure({
             'mode': config.MODE,
@@ -26,6 +26,7 @@ export class PaymentController {
         });
     }
 
+    @ApiUseTags('paypal')
     @Post('paypal/execute')
     @HttpCode(200)
     async executePaypal(@Body() dto: ExecutePayment, @Res() res: Response): Promise<any> {
@@ -48,13 +49,12 @@ export class PaymentController {
                 }
             }
         });
-
     }
 
+    @ApiUseTags('paypal')
     @Post('paypal/create')
     @HttpCode(200)
     async createPaypal(@Body() dto: CreatePaymentDto, @Res() res: Response): Promise<any> {
-
         var create_payment_json = {
             "intent": "sale",
             "payer": {
@@ -72,11 +72,9 @@ export class PaymentController {
                 "description": "This is the payment description."
             }]
         };
-
         paypal.payment.create(create_payment_json, (error, payment) => {
             if (error) {
                 throw error;
-                // return res.json({"error":error})
             }
             else {
                 const savePayment = new CreatePaymentDto();
@@ -88,12 +86,11 @@ export class PaymentController {
                 const createdPayment = new this.paymentModel(savePayment).save((err, data) => {
                     return res.json({ "paymentID": payment.id, "id_payment": data._id })
                 });
-
             }
         });
-
     }
 
+    @ApiUseTags('normal')
     @Post('normal/execute')
     @HttpCode(200)
     async executeNormal(@Body() dto: ExecutePaymentNormal, @Res() res: Response): Promise<any> {
@@ -102,12 +99,10 @@ export class PaymentController {
         res.send('payment completed successfully');
     }
 
-
+    @ApiUseTags('normal')
     @Post('normal/create')
     @HttpCode(200)
     async createNormal(@Body() dto: CreatePaymentDto, @Res() res: Response): Promise<any> {
-
-
         const savePayment = new CreatePaymentDto();
         savePayment.id_client = dto.id_client;
         savePayment.id_order = dto.id_order;
@@ -119,27 +114,25 @@ export class PaymentController {
         });
     }
 
+    @ApiUseTags('payments')
     @Get("payments")
     @HttpCode(200)
     async findAll(): Promise<any> {
         return (await this.paymentModel.find().exec())
     }
 
+    @ApiUseTags('check')
     @Get("test")
     @HttpCode(200)
     async test(): Promise<any> {
         return (await this.paymentService.test())
     }
 
+    @ApiUseTags('check')
     @Get("test2")
     @HttpCode(200)
     async test2(): Promise<any> {
         return (await this.paymentService.test2())
     }
-
-
-
-
-
 }
 
