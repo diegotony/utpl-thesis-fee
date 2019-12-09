@@ -50,10 +50,14 @@ export class PaymentService {
     }
   }
 
-  async findByID(id:string){
+  async findByID(id){
+    console.log("Init")
+    console.log(id)
     return await this.paymentModel.findById(id,(err,user)=>{
-      this.stateOrder(user.id_order)
+      console.log("Find BY ID ")
       console.log(user)
+      this.stateOrder(user.id_order)
+      // console.log(user)
     }).exec();
   }
   async updatePayment(dto: ExecutePayment, data) {
@@ -71,6 +75,7 @@ export class PaymentService {
   }
 
   async stateOrder(data) {
+    // console.log("Dentro del metodo")
     return this.client.emit<any>('stateOrder', [data])
   }
 
@@ -83,8 +88,4 @@ export class PaymentService {
     return this.client.send<any>('holiPattern', [])
   }
 
-  // changeStatus(data): Observable<string>{
-  //   const pattern = { cmd: 'changeStatePago' };
-  //   return this.order.send<string>(pattern, [data]);
-  // }
 }

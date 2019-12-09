@@ -30,16 +30,20 @@ export class PaymentController {
     @Post('paypal/execute')
     @HttpCode(200)
     async executePaypal(@Body() dto: ExecutePayment, @Res() res: Response): Promise<any> {
-
+        // console.log("Body")
+        // console.log(dto)
         var paymentId = dto.paymentID;
         var payerId = { 'payer_id': dto.payerID };
         var id_payment = dto.id_payment
+        // console.log("DTO")
+        // console.log(id_payment)
         paypal.payment.execute(paymentId, payerId, (error, payment) => {
             if (error) {
                 console.error(error);
             } else {
                 if (payment.state == 'approved') {
-                    console.log(id_payment)
+                    // console.log("Execute")
+                    // console.log(id_payment)
                     this.paymentService.updatePayment(dto, "Completado")
                     this.paymentService.findByID(id_payment)
                     res.send('payment completed successfully');
@@ -77,14 +81,15 @@ export class PaymentController {
                 throw error;
             }
             else {
+                console.log("Execute")
                 console.log(dto)
-                const savePayment = new CreatePaymentDto();
-                savePayment.id_client = dto.id_client;
-                savePayment.id_order = dto.id_order;
-                savePayment.total = dto.total;
-                savePayment.payType = dto.payType
-                savePayment.status = "Pendiente"
-                const createdPayment = new this.paymentModel(savePayment).save((err, data) => {
+                // const savePayment = new CreatePaymentDto();
+                // savePayment.id_client = dto.id_client;
+                // savePayment.id_order = dto.id_order;
+                // savePayment.total = dto.total;
+                // savePayment.payType = dto.payType
+                // savePayment.status = "Pendiente"
+                const createdPayment = new this.paymentModel(dto).save((err, data) => {
                     return res.json({ "paymentID": payment.id, "id_payment": data._id })
                 });
             }
