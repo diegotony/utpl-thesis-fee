@@ -17,7 +17,7 @@ export class PaymentController {
 
     constructor(
         @InjectModel('Payment') public readonly paymentModel: Model<CreatePaymentDto>,
-        private readonly paymentService: PaymentService,) {
+        private readonly paymentService: PaymentService, ) {
         //  Paypal variable package
         paypal.configure({
             'mode': config.MODE,
@@ -77,6 +77,7 @@ export class PaymentController {
                 throw error;
             }
             else {
+                console.log(dto)
                 const savePayment = new CreatePaymentDto();
                 savePayment.id_client = dto.id_client;
                 savePayment.id_order = dto.id_order;
