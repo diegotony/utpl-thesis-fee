@@ -1,9 +1,12 @@
-import { Controller, Get, Post, Body, HttpCode, Res } from '@nestjs/common';
-import { Response } from 'express';
+import { Controller, Get, HttpCode } from "@nestjs/common";
 
-var paypal = require('paypal-rest-sdk');
 @Controller()
 export class AppController {
 
+    @Get()
+    @HttpCode(200)
+    async helloFee(): Promise<any> {
+        return {"service":{"status":true}}
 
+    }
 }
