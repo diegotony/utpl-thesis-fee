@@ -1,41 +1,49 @@
 version: "3"
 services:
-  mongodb-client:
-    image: 'bitnami/mongodb:latest'
-    container_name: mongodb-client
+  mongo_db:
+    image: 'mongo'
+    container_name: mongo_db
     restart: always
     ports:
-      - "27019:27017"
+      - "27017:27017"
     volumes:
-      - mongodb-client:/data/db/client
-    environment: 
-      - MONGODB_USERNAME=user
-      - MONGODB_PASSWORD=password
-      - MONGODB_DATABASE=my_database
+      - data-db:/data/db
     networks:
-      backend:
+      - web-net
+  
+  redis_db:
+    image: 'redis:alpine'
+    container_name: redis
+    restart: always
+    ports:
+      - "6379:6379"
+    networks:
+      - web-net
 
   fee-micro:
     restart: always
-    image: diegotony/fee-micro:k8s
+   # image: diegotony/fee-micro:k8s
+    build: ./
     ports:
-      - "4003:4003"
+      - "3041:3041"
     environment:
-      - MONGO_HOST=mongodb-client
-      - PORT=4003
+      - MONGO_HOST=mongo_db
+      - PORT=3041
+      - REDIS_HOST=redis_db
       - MODE=sandbox
       - CLIENT_ID=EBWKjlELKMYqRNQ6sYvFo64FtaRLRR5BdHEESmha49TM
       - CLIENT_SECRET=EO422dn3gQLgDbuwqTjzrFgFtaRLRR5BdHEESmha49TM
 
     depends_on:
-      - mongodb-client
+      - mongo_db
+      - redis_db
     links:
-      - mongodb-client
+      - mongo_db
+      - redis_db
     networks:
-      backend:
-
+      - web-net
 volumes:
-  mongodb-client:
+  data-db:
 networks:
-  backend:
+  web-net:
     driver: bridge
