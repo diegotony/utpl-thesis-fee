@@ -10,4 +10,4 @@ jobs:
       - docker build -t diegotony/client-micro .
       after_success:
       - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-      - docker push $DOCKER_USERNAME/billing-micro:latest
+      - docker push $DOCKER_USERNAME/fee-micro:latest
